@@ -10,7 +10,7 @@ list.files(path = './sigungusensus')
 
 # shp 파일 불러오기
 # bnd_sigungu_00_2019_2019_2Q
-sigungu <- readOGR(dsn = './sigunguseusus/bnd_sigungu_00_2019_2019_2Q.shp', layer = 'bnd_sigungu_00_2019_2019_2Q', encoding = 'CP949')
+sigungu <- readOGR(dsn = './sigungusensus/bnd_sigungu_00_2019_2019_2Q.shp', layer = 'bnd_sigungu_00_2019_2019_2Q', encoding = 'CP949')
 
 # sigungu to DF
 sigunguDF <- fortify(model=sigungu)
