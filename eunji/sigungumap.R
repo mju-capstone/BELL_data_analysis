@@ -24,9 +24,6 @@ sigunguDF <- merge(x=sigunguDF,
                    by='id', 
                    all.x=TRUE)
 
-# 오름차순 정렬
-sigunguDF <- sigunguDF[order(sigunguDF$id, sigunguDF$order)]
-
 # 데이터 양 줄이기
 sigunguDF <- sigunguDF[sigunguDF$order %% 100 == 1,]
 

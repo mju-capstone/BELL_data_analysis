@@ -21,9 +21,6 @@ sido@data$id <- rownames(x=sido@data)
 # merge
 sidoDF <- merge(x=sidoDF, y=sido@data[,c('id', 'base_date', 'sido_cd', 'sido_nm')], by='id', all.x=TRUE)
 
-# 오름차순 정렬
-sidoDF <- sidoDF[order(sidoDF$id, sidoDF$order),]
-
 # 데이터 1/50로 줄이기
 sidoDF <- sidoDF[sidoDF$order %% 50 == 1,]
 
