@@ -1,3 +1,5 @@
+# 시도별 미세먼지 농도 시각화
+
 # 필요한 library 가져오기
 library(maps)
 library(ggplot2)
@@ -59,23 +61,25 @@ sidoMap3 <- ggplot(data=sidoDF2, mapping = aes(x=lonWGS84, y=latWGS84, group=gro
 # 확인
 sidoMap3
 
-
-# 2020
-# sido_nm 기준으로 병합
-sidoDF2020 <- merge(x=sidoDF2, y=aqidata2020[,], by='sido_nm', all.x=TRUE)
-
 # 색칠하기
 library(RColorBrewer)
-
 myPal <- brewer.pal(n=9, name='YlOrRd')
 
 
-# 2020 data map
+# 2020
+sidoDF2020 <- merge(x=sidoDF2, y=aqidata2020[,], by='sido_nm', all.x=TRUE)
 ggplot(data=sidoDF2020, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
 
 
 # 2019
 sidoDF2019 <- merge(x=sidoDF2, y=aqidata2019[,], by='sido_nm', all.x=TRUE)
-# 2019 datamap
 ggplot(data=sidoDF2019, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
+
+
+# 2018
+sidoDF2018<-merge(x=sidoDF2, y=aqidata2018[,], by='sido_nm', all.x=TRUE)
+ggplot(data=sidoDF2018, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
+
+
+
 
