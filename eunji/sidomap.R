@@ -56,30 +56,26 @@ changedCoords <- convertCoords(lon = sidoDF2$long, lat = sidoDF2$lat)
 sidoDF2 <- cbind(sidoDF2, changedCoords)
 
 sidoMap3 <- ggplot(data=sidoDF2, mapping = aes(x=lonWGS84, y=latWGS84, group=group)) + geom_polygon(fill='white', color='black')
+# 확인
+sidoMap3
 
 
-# 임의의 미세먼지 데이터 추가
-sido_nm <- c("서울특별시", "부산광역시", "대구광역시", "인천광역시",
-          "광주광역시", "대전광역시", "울산광역시", "세종특별자치시",
-          "경기도", "강원도", "충청북도", "충청남도", "전라북도",
-          "전라남도", "경상북도", "경상남도",
-          "제주특별자치도")
-aqi <- c(30.0, 10.0, 12.0, 13.0, 17.0, 20.0, 23.0, 18.0, 25.0, 15.0, 11.0, 5.0, 13.0, 14.0, 18.0, 23.0, 17.0)
-aqidata = data.frame(sido_nm=sido_nm, aqi=aqi)
-
-
+# 2020
 # sido_nm 기준으로 병합
-sidoDF2 <- merge(x=sidoDF2, y=aqidata[,], by='sido_nm', all.x=TRUE)
+sidoDF2020 <- merge(x=sidoDF2, y=aqidata2020[,], by='sido_nm', all.x=TRUE)
 
 # 색칠하기
 library(RColorBrewer)
 
 myPal <- brewer.pal(n=9, name='YlOrRd')
 
-ggplot(data=sidoDF2, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
+
+# 2020 data map
+ggplot(data=sidoDF2020, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
 
 
-
-
-
+# 2019
+sidoDF2019 <- merge(x=sidoDF2, y=aqidata2019[,], by='sido_nm', all.x=TRUE)
+# 2019 datamap
+ggplot(data=sidoDF2019, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
 
