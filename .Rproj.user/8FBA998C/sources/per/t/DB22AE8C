@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588668418134.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DB22AE8C",
+    "lastKnownWriteTime" : 2112856246648,
+    "last_content_update" : 1588668418134,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "ECC1E1F5",
+        "caption" : "finedust_d",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=finedust_d&cache_key=ECC1E1F5",
+        "displayedObservations" : 76,
+        "environment" : "",
+        "expression" : "finedust_d",
+        "object" : "finedust_d",
+        "preview" : 0,
+        "totalObservations" : 76,
+        "variables" : 4
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588602030868.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2530992060",
+    "id" : "E18B7D7D",
+    "lastKnownWriteTime" : 1588671034,
+    "last_content_update" : 1588671034078,
+    "path" : "C:/Users/Hyejin/Desktop/File/University/Capstone1/project/website/hyejin/correlation analysis.R",
+    "project_path" : "correlation analysis.R",
+    "properties" : {
+        "cursorPosition" : "52,19",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
