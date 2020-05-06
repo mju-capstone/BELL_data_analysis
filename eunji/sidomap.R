@@ -66,19 +66,36 @@ library(RColorBrewer)
 myPal <- brewer.pal(n=9, name='YlOrRd')
 
 
+# 미세먼지 그래프
 # 2020
 sidoDF2020 <- merge(x=sidoDF2, y=aqidata2020[,], by='sido_nm', all.x=TRUE)
-ggplot(data=sidoDF2020, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
-
+ggplot(data=sidoDF2020, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7]) + ggtitle("2020 pm10") 
 
 # 2019
 sidoDF2019 <- merge(x=sidoDF2, y=aqidata2019[,], by='sido_nm', all.x=TRUE)
-ggplot(data=sidoDF2019, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
-
+ggplot(data=sidoDF2019, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7]) + ggtitle("2019 pm10") 
 
 # 2018
 sidoDF2018<-merge(x=sidoDF2, y=aqidata2018[,], by='sido_nm', all.x=TRUE)
-ggplot(data=sidoDF2018, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7])
+ggplot(data=sidoDF2018, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7]) + ggtitle("2018 pm10")
+
+
+# 초미세먼지 그래프
+# 2020
+sidoDF2020_2 <- merge(x=sidoDF2, y=aqidata2020_2[,], by='sido_nm', all.x=TRUE)
+ggplot(data=sidoDF2020_2, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7]) + ggtitle("2020 pm25") 
+
+# 2019
+sidoDF2019_2 <- merge(x=sidoDF2, y=aqidata2019_2[,], by='sido_nm', all.x=TRUE)
+ggplot(data=sidoDF2019_2, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7]) + ggtitle("2019 pm25") 
+
+# 2018
+sidoDF2018_2<-merge(x=sidoDF2, y=aqidata2018_2[,], by='sido_nm', all.x=TRUE)
+ggplot(data=sidoDF2018_2, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fill=aqi)) + geom_polygon(color='gray30') + coord_map() + scale_fill_gradient(low=myPal[3], high = myPal[7]) + ggtitle("2018 pm25")
+
+
+
+
 
 
 
