@@ -39,17 +39,17 @@
 
 ## 분석 결과
 
-1. 2020 data
+1. 2020 미세먼지, 초미세먼지 데이터
 
-<img src="./screenshot/2020map-pm10.png" width="300">
+<img src="./screenshot/2020pm10.png" width="300"> <img src="./screenshot/2020pm25.png" width="300">
 
-2. 2019 data
+2. 2019 미세먼지, 초미세먼지 데이터
 
-<img src="./screenshot/2019map-pm10.png" width="300">
+<img src="./screenshot/2019pm10.png" width="300"> <img src="./screenshot/2019pm25.png" width="300">
 
-3. 2018 data
+3. 2018 미세먼지, 초미세먼지 데이터
 
-<img src="./screenshot/2018map-pm10.png" width="300">
+<img src="./screenshot/2018pm10.png" width="300"> <img src="./screenshot/2018pm25.png" width="300">
 
 
 ## 결론
