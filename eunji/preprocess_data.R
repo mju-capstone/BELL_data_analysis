@@ -6,14 +6,18 @@ library(dplyr)
 # preprocess seoul
 seoul_aqi = read.csv("./aqidata/seoul.csv")
 
+# 미세먼지 + 초미세먼지
 seoul_aqi2020 = seoul_aqi[grep("2020/", seoul_aqi$date),]
-seoul2020 = mean(seoul_aqi2020$pm10, na.rm = TRUE)
+seoul2020 = mean(seoul_aqi2020$pm10, na.rm = TRUE) # 미세
+seoul2020_2 = mean(seoul_aqi2020$pm25, na.rm = TRUE) # 초미세 
 
 seoul_aqi2019 = seoul_aqi[grep("2019/", seoul_aqi$date),]
 seoul2019 = mean(seoul_aqi2019$pm10, na.rm = TRUE)
+seoul2019_2 = mean(seoul_aqi2019$pm25, na.rm = TRUE)
 
 seoul_aqi2018 = seoul_aqi[grep("2018/", seoul_aqi$date),]
 seoul2018 = mean(seoul_aqi2018$pm10, na.rm = TRUE)
+seoul2018_2 = mean(seoul_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess busan
@@ -21,24 +25,31 @@ busan_aqi = read.csv("./aqidata/busan.csv")
 
 busan_aqi2020 = busan_aqi[grep("2020/", busan_aqi$date),]
 busan2020 = mean(busan_aqi2020$pm10, na.rm = TRUE)
+busan2020_2 = mean(busan_aqi2020$pm25, na.rm = TRUE)
 
 busan_aqi2019 = busan_aqi[grep("2019/", busan_aqi$date),]
 busan2019 = mean(busan_aqi2019$pm10, na.rm = TRUE)
+busan2019_2 = mean(busan_aqi2019$pm25, na.rm = TRUE)
 
 busan_aqi2018 = busan_aqi[grep("2018/", busan_aqi$date),]
 busan2018 = mean(busan_aqi2018$pm10, na.rm = TRUE)
+busan2018_2 = mean(busan_aqi2018$pm25, na.rm = TRUE)
+
 
 # preprocess daegu
 daegu_aqi = read.csv("./aqidata/daegu.csv")
 
 daegu_aqi2020 = daegu_aqi[grep("2020/", daegu_aqi$date),]
 daegu2020 = mean(daegu_aqi2020$pm10, na.rm = TRUE)
+daegu2020_2 = mean(daegu_aqi2020$pm25, na.rm = TRUE)
 
 daegu_aqi2019 = daegu_aqi[grep("2019/", daegu_aqi$date),]
 daegu2019 = mean(daegu_aqi2019$pm10, na.rm = TRUE)
+daegu2019_2 = mean(daegu_aqi2019$pm25, na.rm = TRUE)
 
 daegu_aqi2018 = daegu_aqi[grep("2018/", daegu_aqi$date),]
 daegu2018 = mean(daegu_aqi2018$pm10, na.rm = TRUE)
+daegu2018_2 = mean(daegu_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess incheon
@@ -46,12 +57,15 @@ incheon_aqi = read.csv("./aqidata/incheon.csv")
 
 incheon_aqi2020 = incheon_aqi[grep("2020/", incheon_aqi$date),]
 incheon2020 = mean(incheon_aqi2020$pm10, na.rm = TRUE)
+incheon2020_2 = mean(incheon_aqi2020$pm25, na.rm = TRUE)
 
 incheon_aqi2019 = incheon_aqi[grep("2019/", incheon_aqi$date),]
 incheon2019 = mean(incheon_aqi2019$pm10, na.rm = TRUE)
+incheon2019_2 = mean(incheon_aqi2019$pm25, na.rm = TRUE)
 
 incheon_aqi2018 = incheon_aqi[grep("2018/", incheon_aqi$date),]
 incheon2018 = mean(incheon_aqi2018$pm10, na.rm = TRUE)
+incheon2018_2 = mean(incheon_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess gwangju
@@ -59,38 +73,45 @@ gwangju_aqi = read.csv("./aqidata/gwangju.csv")
 
 gwangju_aqi2020 = gwangju_aqi[grep("2020/", gwangju_aqi$date),]
 gwangju2020 = mean(gwangju_aqi2020$pm10, na.rm = TRUE)
+gwangju2020_2 = mean(gwangju_aqi2020$pm25, na.rm = TRUE)
 
 gwangju_aqi2019 = gwangju_aqi[grep("2019/", gwangju_aqi$date),]
 gwangju2019 = mean(gwangju_aqi2019$pm10, na.rm = TRUE)
+gwangju2019_2 = mean(gwangju_aqi2019$pm25, na.rm = TRUE)
 
 gwangju_aqi2018 = gwangju_aqi[grep("2018/", gwangju_aqi$date),]
 gwangju2018 = mean(gwangju_aqi2018$pm10, na.rm = TRUE)
-
+gwangju2018_2 = mean(gwangju_aqi2018$pm25, na.rm = TRUE)
 
 # preprocess daejeon
 daejeon_aqi = read.csv("./aqidata/daejeon.csv")
 
 daejeon_aqi2020 = daejeon_aqi[grep("2020/", daejeon_aqi$date),]
 daejeon2020 = mean(daejeon_aqi2020$pm10, na.rm = TRUE)
+daejeon2020_2 = mean(daejeon_aqi2020$pm25, na.rm = TRUE)
 
 daejeon_aqi2019 = daejeon_aqi[grep("2019/", daejeon_aqi$date),]
 daejeon2019 = mean(daejeon_aqi2019$pm10, na.rm = TRUE)
+daejeon2019_2 = mean(daejeon_aqi2019$pm25, na.rm = TRUE)
 
 daejeon_aqi2018 = daejeon_aqi[grep("2018/", daejeon_aqi$date),]
 daejeon2018 = mean(daejeon_aqi2018$pm10, na.rm = TRUE)
-
+daejeon2018_2 = mean(daejeon_aqi2018$pm25, na.rm = TRUE)
 
 # preprocess ulsan
 ulsan_aqi = read.csv("./aqidata/ulsan.csv")
 
 ulsan_aqi2020 = ulsan_aqi[grep("2020/", ulsan_aqi$date),]
 ulsan2020 = mean(ulsan_aqi2020$pm10, na.rm = TRUE)
+ulsan2020_2 = mean(ulsan_aqi2020$pm25, na.rm = TRUE)
 
 ulsan_aqi2019 = ulsan_aqi[grep("2019/", ulsan_aqi$date),]
 ulsan2019 = mean(ulsan_aqi2019$pm10, na.rm = TRUE)
+ulsan2019_2 = mean(ulsan_aqi2019$pm25, na.rm = TRUE)
 
 ulsan_aqi2018 = ulsan_aqi[grep("2018/", ulsan_aqi$date),]
 ulsan2018 = mean(ulsan_aqi2018$pm10, na.rm = TRUE)
+ulsan2018_2 = mean(ulsan_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess sejong
@@ -98,12 +119,15 @@ sejong_aqi = read.csv("./aqidata/sejong.csv")
 
 sejong_aqi2020 = sejong_aqi[grep("2020/", sejong_aqi$date),]
 sejong2020 = mean(sejong_aqi2020$pm10, na.rm = TRUE)
+sejong2020_2 = mean(sejong_aqi2020$pm25, na.rm = TRUE)
 
 sejong_aqi2019 = sejong_aqi[grep("2019/", sejong_aqi$date),]
 sejong2019 = mean(sejong_aqi2019$pm10, na.rm = TRUE)
+sejong2019_2 = mean(sejong_aqi2019$pm25, na.rm = TRUE)
 
 sejong_aqi2018 = sejong_aqi[grep("2018/", sejong_aqi$date),]
 sejong2018 = mean(sejong_aqi2018$pm10, na.rm = TRUE)
+sejong2018_2 = mean(sejong_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess gyeongi
@@ -119,12 +143,15 @@ gyeongi_aqi <- rbind(goyang_aqi, suwon_aqi, yongin_aqi, bucheon_aqi, seongnam_aq
 
 gyeongi_aqi2020 = gyeongi_aqi[grep("2020/", gyeongi_aqi$date),]
 gyeongi2020 = mean(gyeongi_aqi2020$pm10, na.rm = TRUE)
+gyeongi2020_2 = mean(gyeongi_aqi2020$pm25, na.rm = TRUE)
 
 gyeongi_aqi2019 = gyeongi_aqi[grep("2019/", gyeongi_aqi$date),]
 gyeongi2019 = mean(gyeongi_aqi2019$pm10, na.rm = TRUE)
+gyeongi2019_2 = mean(gyeongi_aqi2019$pm25, na.rm = TRUE)
 
 gyeongi_aqi2018 = gyeongi_aqi[grep("2018/", gyeongi_aqi$date),]
 gyeongi2018 = mean(gyeongi_aqi2018$pm10, na.rm = TRUE)
+gyeongi2018_2 = mean(gyeongi_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess gangwon
@@ -139,12 +166,15 @@ gangwon_aqi<-rbind(chuncheon_aqi, donghae_aqi, gangneung_aqi, sokcho_aqi, wonju_
 
 gangwon_aqi2020 = gangwon_aqi[grep("2020/", gangwon_aqi$date),]
 gangwon2020 = mean(gangwon_aqi2020$pm10, na.rm = TRUE)
+gangwon2020_2 = mean(gangwon_aqi2020$pm25, na.rm = TRUE)
 
 gangwon_aqi2019 = gangwon_aqi[grep("2019/", gangwon_aqi$date),]
 gangwon2019 = mean(gangwon_aqi2019$pm10, na.rm = TRUE)
+gangwon2019_2 = mean(gangwon_aqi2019$pm25, na.rm = TRUE)
 
 gangwon_aqi2018 = gangwon_aqi[grep("2018/", gangwon_aqi$date),]
 gangwon2018 = mean(gangwon_aqi2018$pm10, na.rm = TRUE)
+gangwon2018_2 = mean(gangwon_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess chungbuk
@@ -159,12 +189,15 @@ chungbuk_aqi<-rbind(chungju_aqi, eumseong_aqi, jecheon_aqi, jincheon_aqi, cheong
 
 chungbuk_aqi2020 = chungbuk_aqi[grep("2020/", chungbuk_aqi$date),]
 chungbuk2020 = mean(chungbuk_aqi2020$pm10, na.rm = TRUE)
+chungbuk2020_2 = mean(chungbuk_aqi2020$pm25, na.rm = TRUE)
 
 chungbuk_aqi2019 = chungbuk_aqi[grep("2019/", chungbuk_aqi$date),]
 chungbuk2019 = mean(chungbuk_aqi2019$pm10, na.rm = TRUE)
+chungbuk2019_2 = mean(chungbuk_aqi2019$pm25, na.rm = TRUE)
 
 chungbuk_aqi2018 = chungbuk_aqi[grep("2018/", chungbuk_aqi$date),]
 chungbuk2018 = mean(chungbuk_aqi2018$pm10, na.rm = TRUE)
+chungbuk2018_2 = mean(chungbuk_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess chungnam
@@ -179,12 +212,15 @@ chungnam_aqi<-rbind(asan_aqi, cheonan_aqi, dangjin_aqi, nonsan_aqi, seosan_aqi)
 
 chungnam_aqi2020 = chungnam_aqi[grep("2020/", chungnam_aqi$date),]
 chungnam2020 = mean(chungnam_aqi2020$pm10, na.rm = TRUE)
+chungnam2020_2 = mean(chungnam_aqi2020$pm25, na.rm = TRUE)
 
 chungnam_aqi2019 = chungnam_aqi[grep("2019/", chungnam_aqi$date),]
 chungnam2019 = mean(chungnam_aqi2019$pm10, na.rm = TRUE)
+chungnam2019_2 = mean(chungnam_aqi2019$pm25, na.rm = TRUE)
 
 chungnam_aqi2018 = chungnam_aqi[grep("2018/", chungnam_aqi$date),]
 chungnam2018 = mean(chungnam_aqi2018$pm10, na.rm = TRUE)
+chungnam2018_2 = mean(chungnam_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess jeonbuk
@@ -199,12 +235,15 @@ jeonbuk_aqi<-rbind(gimje_aqi, gunsan_aqi, iksan_aqi, jeongeup_aqi, jeonju_aqi)
 
 jeonbuk_aqi2020 = jeonbuk_aqi[grep("2020/", jeonbuk_aqi$date),]
 jeonbuk2020 = mean(jeonbuk_aqi2020$pm10, na.rm = TRUE)
+jeonbuk2020_2 = mean(jeonbuk_aqi2020$pm25, na.rm = TRUE)
 
 jeonbuk_aqi2019 = jeonbuk_aqi[grep("2019/", jeonbuk_aqi$date),]
 jeonbuk2019 = mean(jeonbuk_aqi2019$pm10, na.rm = TRUE)
+jeonbuk2019_2 = mean(jeonbuk_aqi2019$pm25, na.rm = TRUE)
 
 jeonbuk_aqi2018 = jeonbuk_aqi[grep("2018/", jeonbuk_aqi$date),]
 jeonbuk2018 = mean(jeonbuk_aqi2018$pm10, na.rm = TRUE)
+jeonbuk2018_2 = mean(jeonbuk_aqi2018$pm25, na.rm = TRUE)
 
 
 # preprocess jeonnam
@@ -219,12 +258,15 @@ jeonnam_aqi<-rbind(gwangyang_aqi, mokpo_aqi, muan_aqi, suncheon_aqi, yeosu_aqi)
 
 jeonnam_aqi2020 = jeonnam_aqi[grep("2020/", jeonnam_aqi$date),]
 jeonnam2020 = mean(jeonnam_aqi2020$pm10, na.rm = TRUE)
+jeonnam2020_2 = mean(jeonnam_aqi2020$pm25, na.rm = TRUE)
 
 jeonnam_aqi2019 = jeonnam_aqi[grep("2019/", jeonnam_aqi$date),]
 jeonnam2019 = mean(jeonnam_aqi2019$pm10, na.rm = TRUE)
+jeonnam2019_2 = mean(jeonnam_aqi2019$pm25, na.rm = TRUE)
 
 jeonnam_aqi2018 = jeonnam_aqi[grep("2018/", jeonnam_aqi$date),]
 jeonnam2018 = mean(jeonnam_aqi2018$pm10, na.rm = TRUE)
+jeonnam2018_2 = mean(jeonnam_aqi2018$pm25, na.rm = TRUE)
 
 
 
@@ -240,13 +282,15 @@ gyeongbuk_aqi<-rbind(andong_aqi, gyeongju_aqi, gimcheon_aqi, gumi_aqi, pohang_aq
 
 gyeongbuk_aqi2020 = gyeongbuk_aqi[grep("2020/", gyeongbuk_aqi$date),]
 gyeongbuk2020 = mean(gyeongbuk_aqi2020$pm10, na.rm = TRUE)
+gyeongbuk2020_2 = mean(gyeongbuk_aqi2020$pm25, na.rm = TRUE)
 
 gyeongbuk_aqi2019 = gyeongbuk_aqi[grep("2019/", gyeongbuk_aqi$date),]
 gyeongbuk2019 = mean(gyeongbuk_aqi2019$pm10, na.rm = TRUE)
+gyeongbuk2019_2 = mean(gyeongbuk_aqi2019$pm25, na.rm = TRUE)
 
 gyeongbuk_aqi2018 = gyeongbuk_aqi[grep("2018/", gyeongbuk_aqi$date),]
 gyeongbuk2018 = mean(gyeongbuk_aqi2018$pm10, na.rm = TRUE)
-
+gyeongbuk2018_2 = mean(gyeongbuk_aqi2018$pm25, na.rm = TRUE)
 
 
 # preeprocess kyungnam
@@ -262,12 +306,15 @@ gyeongnam_aqi=rbind(changwon_aqi, geoje_aqi, gimhae_aqi, jinju_aqi, yangsan_aqi)
 
 gyeongnam_aqi2020 = gyeongnam_aqi[grep("2020/", gyeongnam_aqi$date),]
 gyeongnam2020 = mean(gyeongnam_aqi2020$pm10, na.rm = TRUE)
+gyeongnam2020_2 = mean(gyeongnam_aqi2020$pm25, na.rm = TRUE)
 
 gyeongnam_aqi2019 = gyeongnam_aqi[grep("2019/", gyeongnam_aqi$date),]
 gyeongnam2019 = mean(gyeongnam_aqi2019$pm10, na.rm = TRUE)
+gyeongnam2019_2 = mean(gyeongnam_aqi2019$pm25, na.rm = TRUE)
 
 gyeongnam_aqi2018 = gyeongnam_aqi[grep("2018/", gyeongnam_aqi$date),]
 gyeongnam2018 = mean(gyeongnam_aqi2018$pm10, na.rm = TRUE)
+gyeongnam2018_2 = mean(gyeongnam_aqi2018$pm25, na.rm = TRUE)
 
 
 
@@ -276,13 +323,15 @@ jeju_aqi = read.csv("./aqidata/jeju.csv")
 
 jeju_aqi2020 = jeju_aqi[grep("2020/", jeju_aqi$date),]
 jeju2020 = mean(jeju_aqi2020$pm10, na.rm = TRUE)
+jeju2020_2 = mean(jeju_aqi2020$pm25, na.rm = TRUE)
 
 jeju_aqi2019 = jeju_aqi[grep("2019/", jeju_aqi$date),]
 jeju2019 = mean(jeju_aqi2019$pm10, na.rm = TRUE)
+jeju2019_2 = mean(jeju_aqi2019$pm25, na.rm = TRUE)
 
 jeju_aqi2018 = jeju_aqi[grep("2018/", jeju_aqi$date),]
 jeju2018 = mean(jeju_aqi2018$pm10, na.rm = TRUE)
-
+jeju2018_2 = mean(jeju_aqi2018$pm25, na.rm = TRUE)
 
 
 
@@ -293,6 +342,7 @@ sido_nm <- c("서울특별시", "부산광역시", "대구광역시", "인천광
              "전라남도", "경상북도", "경상남도",
              "제주특별자치도")
 
+# 미세먼지 데이터
 aqi2020<-c(seoul2020, busan2020, daegu2020, incheon2020,
            gwangju2020, daejeon2020, ulsan2020, sejong2020,
            gyeongi2020, gangwon2020, chungbuk2020, chungnam2020, jeonbuk2020,
@@ -309,9 +359,34 @@ aqi2018<-c(seoul2018, busan2018, daegu2018, incheon2018,
            jeonnam2018, gyeongbuk2018, gyeongnam2018, jeju2018)
 
 
+# 초미세먼지 데이터
+aqi2020_2<-c(seoul2020_2, busan2020_2, daegu2020_2, incheon2020_2,
+           gwangju2020_2, daejeon2020_2, ulsan2020_2, sejong2020_2,
+           gyeongi2020_2, gangwon2020_2, chungbuk2020_2, chungnam2020_2, jeonbuk2020_2,
+           jeonnam2020_2, gyeongbuk2020_2, gyeongnam2020_2, jeju2020_2)
+
+aqi2019_2 <-c(seoul2019_2, busan2019_2, daegu2019_2, incheon2019_2,
+           gwangju2019_2, daejeon2019_2, ulsan2019_2, sejong2019_2,
+           gyeongi2019_2, gangwon2019_2, chungbuk2019_2, chungnam2019_2, jeonbuk2019_2,
+           jeonnam2019_2, gyeongbuk2019_2, gyeongnam2019_2, jeju2019_2)
+
+aqi2018_2<-c(seoul2018_2, busan2018_2, daegu2018_2, incheon2018_2,
+           gwangju2018_2, daejeon2018_2, ulsan2018_2, sejong2018_2,
+           gyeongi2018_2, gangwon2018_2, chungbuk2018_2, chungnam2018_2, jeonbuk2018_2,
+           jeonnam2018_2, gyeongbuk2018_2, gyeongnam2018_2, jeju2018_2)
+
+
+# 미세먼지 DF
 aqidata2020 = data.frame(sido_nm=sido_nm, aqi=aqi2020)
-
 aqidata2019 = data.frame(sido_nm=sido_nm, aqi=aqi2019)
-
 aqidata2018 = data.frame(sido_nm=sido_nm, aqi=aqi2018)
+
+
+# 초미세먼지 DF
+aqidata2020_2 = data.frame(sido_nm=sido_nm, aqi=aqi2020_2)
+aqidata2019_2 = data.frame(sido_nm=sido_nm, aqi=aqi2019_2)
+aqidata2018_2 = data.frame(sido_nm=sido_nm, aqi=aqi2018_2)
+
+
+
 
