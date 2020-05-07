@@ -11,7 +11,7 @@ seoul_aqi2020 = seoul_aqi[grep("2020/", seoul_aqi$date),]
 seoul2020 = mean(seoul_aqi2020$pm10, na.rm = TRUE) # 미세
 seoul2020_2 = mean(seoul_aqi2020$pm25, na.rm = TRUE) # 초미세 
 
-seoul_aqi2019 = seoul_aqi[grep("2019/", seoul_aqi$date),]
+seoul_aqi2019 = seqoul_aqi[grep("2019/", seoul_aqi$date),]
 seoul2019 = mean(seoul_aqi2019$pm10, na.rm = TRUE)
 seoul2019_2 = mean(seoul_aqi2019$pm25, na.rm = TRUE)
 
