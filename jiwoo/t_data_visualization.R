@@ -32,9 +32,37 @@ gg_2  <-ggplot()+
   
 gg_2
 
-#4. 요일별 교통량-미세먼지 추이 비교 
-gg2<-ggplot(a_2018, aes(x=day, y=t_0.01, group=1)) +geom_bar(stat = "identity",width=0.7, fill="steelblue")
-gg2+geom_bar(aes(x=day, y=pm10, group=1), stat = "identity",width=0.7, fill="#ff3366") + ggtitle("2018 요일별 서울시 교통량과 미세먼지")+theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30"))
+
+#q2  <-ggplot()+
+#  geom_bar(data=t_20180103,aes(y=traffic,x= date,colour="darkblue"),size=0.7 )+
+#  geom_bar(data=t_20180103,aes(y=pm10,x= date,colour="red"),size=0.7) +
+#  scale_color_discrete(name = "data", labels = c("교통량", "미세먼지"))+ 
+#  ggtitle("2018 일별 서울시 교통량 미세먼지 농도 추이 비교 (1분기)")+theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray10")) 
+#q2
+
+t_20180103
+
+w <- ggplot(t_20180103, aes(x=date))
+w <- w + geom_bar(aes(y=traffic), stat="identity")
+w <- w + geom_line(aes(y=pm10), colour="skyblue", size=2, group=1)
+w
+
+
+
+#4. 요일별 교통량-미세먼지 추이 비교 - ylim 추가 #######
+gg2<-ggplot(a_2018, aes(x=day, y=t_0.01, group=1)) +geom_bar(stat = "identity",width=0.7, fill="steelblue")+ coord_cartesian(ylim = c(30, 60))
+gg2+geom_bar(aes(x=day, y=pm10, group=1), stat = "identity",width=0.7, fill="#ff3366") + coord_cartesian(ylim = c(30, 60))+ggtitle("2018 요일별 서울시 교통량과 미세먼지")+theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30"))
+
+
+
+
+q5 <- ggplot(t_20180103, aes(x=date,y=traffic))+ geom_bar(stat="identity", width=0.7, fill="steelblue")
+q5+geom_bar(aes(x=date, y=pm10, group=1), stat = "identity",width=0.7, fill="#ff3366")
+
+
+ggplot(t_20180103, aes(date, traffic, fill=pm10)) + geom_bar(stat='identity', position="dodge")
+
+
 
 
 
@@ -92,6 +120,7 @@ gg_5+geom_bar(aes(x=day, y=pm10, group=1), stat = "identity",width=0.7, fill="#f
 
 
 
+
 #년도-월별-요일 그래프  
 #ggplot(daily_traffic4, aes(x=label, y=sum, group=1)) +geom_line() 
 #각 일자별 교통량 추이 변화 그래프
@@ -103,5 +132,5 @@ gg_5+geom_bar(aes(x=day, y=pm10, group=1), stat = "identity",width=0.7, fill="#f
 #ggplot(data=daily_traffic3, aes(x=요일, y=sum)) + geom_point()
 #일별 교통량 데이터 (0-1정규화) 막대 그래프 
 #ggplot(plot1, aes(x=date,y=traffic))+ 
-#  geom_bar(stat="identity", width=0.7, 
-#           fill="steelblue")
+  geom_bar(stat="identity", width=0.7, 
+           fill="steelblue")

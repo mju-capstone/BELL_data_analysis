@@ -56,6 +56,20 @@ gg2 <- ggplot(c_year_average, aes(year, group_c, group = 1)) + geom_line(color =
 gg2 <- gg2+geom_line(aes(year, group_s), color = 'blue')
 gg2
 
+w <- ggplot(c_year_average, aes(x = year))
+w <- w + geom_line(aes(y=group_c), stat = "identity", group=1) + coord_cartesian(ylim = c(0, 120))
+w <- w + geom_line(aes(y=group_s), color = "skyblue", size=2, group=1)
+w <- w + scale_y_continuous(sec.axis = sec_axis(~., name="finedust"))
+w
+rm(w)
+                                                                      
+
+w <- ggplot(agg_win, aes(x=풍향2))
+w <- w + geom_bar(aes(y=count), stat="identity") + coord_cartesian(ylim = c(0, 2000))
+w <- w + geom_line(aes(y=pm10*30), colour="skyblue", size=2, group=1)
+w <- w + scale_y_continuous(sec.axis = sec_axis(~./30, name="pm10"))
+w
+
 # visualization for Jan to Apr
 finedust_d <- finedust_v %>%
   group_by(year,month) %>%
@@ -76,3 +90,9 @@ finedust_d$year_month <- paste(finedust_d$year, finedust_d$month)
 gg3 <- ggplot(finedust_d, aes(year, group_c, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust from Jan to Apr") + ylab('finedust') + theme(plot.title = element_text(size = 15, hjust=0.5))
 gg3 <- gg3+geom_line(aes(year, group_s), color = 'blue')
 gg3
+
+# write csv
+write.csv(finedust, file="finedust.csv", row.names=TRUE)
+write.csv(finedust_d, file="annual(1~4) finedust.csv", row.names=TRUE)
+write.csv(finedust_v, file="whole monthly finedust.csv", row.names=TRUE)
+write.csv(c_year_average, file="monthly finedust.csv", row.names=TRUE)
