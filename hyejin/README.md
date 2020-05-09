@@ -22,6 +22,7 @@
 
 분석 결과
 ---------------------
-![중국 18개의 도시와 서울 미세먼지의 산점도](./hyejin/screenshot/correlation graph between china and korea.png)
+1. 중국 18개의 도시와 서울 미세먼지의 산점도 및 연도별 현황
 
-![중국 18개의 도시와 서울 미세먼지의 연도별 현황](./hyejin/screenshot/graph over 7 years)
+<img src="./screenshot/correlation graph between china and korea.png" width="300"> <img src="./screenshot/graph over 7 years.png" width="300">
+
