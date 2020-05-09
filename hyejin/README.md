@@ -22,10 +22,17 @@
 
 분석 결과
 ---------------------
-1. 중국 18개의 도시와 서울 미세먼지의 산점도 및 연도별 현황
-
+1. 중국 18개의 도시의 미세먼지와 서울 미세먼지의 산점도 및 연도별 현황
 <img src="./screenshot/correlation graph between china and korea.png" width="300"> 
 
-2. 중국 18개의 도시와 서울 미세먼지의 연도별 그래프 및 연도별 1월부터 4월까지의 그래프
-<img src="./screenshot/graph over 7 years.PNG" width="300"> <img src="./screenshot/graph from jan to apr.PNG" width="300">
+2. 중국 18개의 도시의 미세먼지와 서울 미세먼지의 연도별 그래프 및 연도별 1월부터 4월까지의 그래프
+<img src="./screenshot/graph over 7 years.PNG" width="300"> <img src="./screenshot/graph from jan to apr.PNG" width="300" height = "359">
 
+3. 중국 산동성의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+<img src="./screenshot/graph between shandong and seoul.PNG">
+
+3. 중국 베이징의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+<img src="./screenshot/graph between beijing and seoul.PNG">
+
+3. 중국 상하이의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+<img src="./screenshot/graph between shanghai and seoul.PNG">
