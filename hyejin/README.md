@@ -30,3 +30,9 @@
 
 3. 중국 산동성의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
 <img src="./screenshot/graph between shandong and seoul.PNG">
+
+3. 중국 베이징의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+<img src="./screenshot/graph between beijing and seoul.PNG">
+
+3. 중국 상하이의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+<img src="./screenshot/graph between shanghai and seoul.PNG">
