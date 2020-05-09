@@ -49,7 +49,7 @@
 
 
 5. 중국 상하이의 미세먼지와 서울 미세먼지의 산점도 월별 그래프
-<img src="./screenshot/correlation graph between shanghai and seoul.PNG" with="200">
+<img src="./screenshot/correlation graph between shanghai and seoul.PNG">
 
 <img src="./screenshot/graph between shanghai and seoul.PNG">
 
