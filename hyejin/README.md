@@ -29,13 +29,13 @@
 <img src="./screenshot/graph over 7 years.PNG" width="300"> <img src="./screenshot/graph from jan to apr.PNG" width="300" height = "359">
 
 3. 중국 산동성의 미세먼지와 서울 미세먼지의 산점도 월별 그래프
-<img src="./screenshot/correlation graph between shandong and seoul.PNG"> <img src="./screenshot/graph between shandong and seoul.PNG">
+<img src="./screenshot/correlation graph between shandong and seoul.PNG" width="300"> <img src="./screenshot/graph between shandong and seoul.PNG">
 
 3. 중국 베이징의 미세먼지와 서울 미세먼지의 산점도 월별 그래프
-<img src="./screenshot/correlation graph between beijing and seoul.PNG"> <img src="./screenshot/graph between beijing and seoul.PNG">
+<img src="./screenshot/correlation graph between beijing and seoul.PNG" width="300"> <img src="./screenshot/graph between beijing and seoul.PNG">
 
 3. 중국 상하이의 미세먼지와 서울 미세먼지의 산점도 월별 그래프
-<img src="./screenshot/correlation graph between shanghai and seoul.PNG"> <img src="./screenshot/graph between shanghai and seoul.PNG">
+<img src="./screenshot/correlation graph between shanghai and seoul.PNG" width="300"> <img src="./screenshot/graph between shanghai and seoul.PNG">
 
 
 결과
