@@ -29,4 +29,4 @@
 <img src="./screenshot/graph over 7 years.PNG" width="300"> <img src="./screenshot/graph from jan to apr.PNG" width="300" height = "359">
 
 3. 중국 산동성의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
-<img src="./screenshot/graph between shandong and seoul.PNG" width="300">
+<img src="./screenshot/graph between shandong and seoul.PNG">
