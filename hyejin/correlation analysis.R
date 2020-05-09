@@ -3,7 +3,7 @@ finedust_without_na <- na.omit(finedust)
 sum(is.na(finedust_without_na))
 cor(finedust$china_average, finedust$seoul_average, method=c("pearson"), use=("complete.obs"))
   # pearson without NA
-  # found chinese and korean fine dust are realated / 0.3687623
+  # found chinese and korean fine dust are realated / 0.3681803
 
 # find outlier
 plot(finedust_without_na$china_average, finedust_without_na$seoul_average)
@@ -46,6 +46,7 @@ c_year_average <- finedust_v %>%
 
 gg1 <- ggplot(c_year_average, aes(year, group_c)) + geom_line(color = 'red') +ggtitle("Finedust over 7 years") + ylab('finedust')
 gg1 <- gg1 + geom_line(aes(year, group_s), color = 'blue')
+gg1
 
   # annal line graph -------------------------
 c_year_average <- finedust_v %>%
@@ -56,19 +57,14 @@ gg2 <- ggplot(c_year_average, aes(year, group_c, group = 1)) + geom_line(color =
 gg2 <- gg2+geom_line(aes(year, group_s), color = 'blue')
 gg2
 
+  # can ignore
 w <- ggplot(c_year_average, aes(x = year))
 w <- w + geom_line(aes(y=group_c), stat = "identity", group=1) + coord_cartesian(ylim = c(0, 120))
 w <- w + geom_line(aes(y=group_s), color = "skyblue", size=2, group=1)
 w <- w + scale_y_continuous(sec.axis = sec_axis(~., name="finedust"))
 w
 rm(w)
-                                                                      
-
-w <- ggplot(agg_win, aes(x=풍향2))
-w <- w + geom_bar(aes(y=count), stat="identity") + coord_cartesian(ylim = c(0, 2000))
-w <- w + geom_line(aes(y=pm10*30), colour="skyblue", size=2, group=1)
-w <- w + scale_y_continuous(sec.axis = sec_axis(~./30, name="pm10"))
-w
+                                                                    
 
 # visualization for Jan to Apr
 finedust_d <- finedust_v %>%
@@ -85,7 +81,6 @@ finedust_d <- finedust_d[-grep("12", finedust_d$month),]
 finedust_d <- finedust_d %>%
   group_by(year) %>%
   summarize(group_c = mean(group_c), group_s = mean(group_s))
-finedust_d$year_month <- paste(finedust_d$year, finedust_d$month)
 
 gg3 <- ggplot(finedust_d, aes(year, group_c, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust from Jan to Apr") + ylab('finedust') + theme(plot.title = element_text(size = 15, hjust=0.5))
 gg3 <- gg3+geom_line(aes(year, group_s), color = 'blue')
