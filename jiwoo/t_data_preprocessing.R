@@ -92,7 +92,10 @@ traffic_2
 
 daily_traffic<- dcast(traffic_2, data.일자 ~ ., value.var="x", sum, na.rm = TRUE )
 daily_traffic
+
+
 write.csv(daily_traffic, file="2018_daily_traffic.csv", row.names=TRUE) 
+
 
 
 #데이터에 요일 추가 
@@ -112,6 +115,7 @@ daily_traffic2
 daily_traffic2$요일 <- factor(daily_traffic2$요일, levels=c("월","화","수","목","금","토","일"))
 levels(daily_traffic2$요일)
 daily_traffic3 <- data.frame(summarise(group_by(daily_traffic2, 월, 요일), sum=sum(교통량합계)))
+daily_traffic3
 
 traffic1 <- data.frame(daily_traffic3$sum)
 traffic1
@@ -293,11 +297,19 @@ write.csv(daily_air, file="2018_daily_air_quality.csv", row.names=TRUE)
 
 
 #데이터에 요일 추가 
+h1 <- data.frame(rep( c("주중", "주중","주중","주중","주중","주말","주말"), 52))
+air_day2 <- rbind(h1,"주중")
+daily_air2 <- cbind(daily_air, air_day2)
+names(daily_air2) <- c("일자", "pm10", "요일")
+daily_air2
+
+#데이터에 요일 추가 
 air_day1 <- data.frame(rep( c("월", "화","수","목","금","토","일"), 52))
 air_day2 <- rbind(air_day1,"월")
 daily_air2 <- cbind(daily_air, air_day2)
 names(daily_air2) <- c("일자", "pm10", "요일")
 daily_air2
+
 
 
 #월별 평균을 위한 '월' 행 추가 

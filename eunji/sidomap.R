@@ -95,8 +95,3 @@ ggplot(data=sidoDF2018_2, mapping = aes(x=lonWGS84, y=latWGS84, group=group, fil
 
 
 
-
-
-
-
-

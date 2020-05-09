@@ -2,6 +2,28 @@
 #2018 교통량 + 미세먼지 (일자별)
 ta <- cbind(daily_air2,daily_traffic2$교통량합계)
 names(ta) <- c("date","pm10","day","traffic")
+ta
+
+
+#2018 교통량 + 미세먼지 (주중 및 주말별)
+qq1 <- data.frame(rep( c("주중", "주중","주중","주중","주중","주말","주말"), 52))
+qqq <- rbind(qq1,"주중")
+j2018 <- cbind(ta,qqq)
+names(j2018) <- c("date","pm10","day","traffic","w")
+j2018
+
+
+
+jj2018<- dcast(j2018, w ~ ., value.var="traffic", sum, na.rm = TRUE )
+names(jj2018) <- c("w","traffic")
+jj2018
+
+
+#str(year_traffic)
+
+
+
+
 
 #2018 교통량 + 미세먼지 데이터만 추출 (일자별) 
 nor3 <- cbind(daily_traffic$교통량합계, daily_air$pm10)
@@ -46,6 +68,11 @@ t <- t[,c(3:4)]
 plot1 <- cbind(daily_air$일자,t)
 names(plot1) <- c("date","pm10","traffic")
 plot1
+
+#2018년 1분기~4분기
+t_20180103 <- plot1[c(1:90),]
+t_20180406 <- plot1[c(91:181),]
+
 
 #2019 표준(z) 정규화 (미세먼지-교통량 일별 데이터)
 c2
@@ -99,12 +126,12 @@ t7
 #2018 상관관계 산점도 - z 정규화 
 nor5
 attach(nor5)
-plot(nor4.traffic~nor4.pm10)
+plot(nor4.traffic~nor4.pm10,main="2018-traffic volume~find dust", xlab="find dust", ylab = "traffic")
 
 #2018 상관관계 산점도 - 정규화 거치지 않은데이터. 정규화하지않아도 양상은 같음 
 nor3
 attach(nor3)
-plot(traffic3~pm103,main="2018")
+plot(traffic3~pm103,main="2018-traffic volume~find dust", xlab="find dust", ylab = "traffic")
 
 
 # 2018 상관관계 분석 - 피어슨의 상관계수 이용 
@@ -113,13 +140,54 @@ cor(nor4.traffic,nor4.pm10, use='complete.obs', method = 'pearson')
 cor.test(nor4.traffic,nor4.pm10)
 
 
+#cov(daily_air4$pm10,daily_air4$traffic)
+#cor(daily_air4$pm10,daily_air4$traffic, use='complete.obs', method = 'pearson')
+#cor.test(daily_air4$pm10,daily_air4$traffic)
+
+
+# 2018 1분기(1월~3월) 상관관계 분석 - 피어슨의 상관계수
+t_20180103
+t1813<-cbind(t_20180103$pm10,t_20180103$traffic)
+t1813 <- data.frame(t1813)
+names(t1813) <- c("a1813","tt1813")
+cor(tt1813,a1813, use='complete.obs', method = 'pearson')
+cor.test(tt1813,a1813)
+
+
+
+# 2018 2분기(1월~3월) 상관관계 산점도 
+attach(t1813)
+plot(a1813~tt1813,main="2018(1~3 month)-traffic volume~find dust", xlab="find dust", ylab = "traffic")
+t1813
+
+# 2018 2분기(1월~3월) 상관관계 분석 - 피어슨의 상관계수
+t_20180103
+t1813<-cbind(t_20180103$pm10,t_20180103$traffic)
+t1813 <- data.frame(t1813)
+names(t1813) <- c("a1813","tt1813")
+cor(tt1813,a1813, use='complete.obs', method = 'pearson')
+cor.test(tt1813,a1813)
+
+
+
+# 2018 1분기(1월~3월) 상관관계 산점도 
+attach(t1813)
+plot(a1813~tt1813,main="2018(1~3 month)-traffic volume~find dust", xlab="find dust", ylab = "traffic")
+t1813
+
+
+
+
 
 #2019 상관관계 산점도 - 0-1 정규화 
 t5<-t4
 names(t5) <- c("t5.미세먼지","t5.교통량")
 attach(t5)
-plot(t5.교통량~t5.미세먼지)
+plot(t5.교통량~t5.미세먼지,main="2019-traffic volume~find dust", xlab="find dust", ylab = "traffic")
 t5
+
+
+
 
 #2019 상관관계 산점도 - z 정규화 
 #attach(d2)
@@ -134,10 +202,39 @@ cor(t5.교통량,t5.미세먼지, use='complete.obs', method = 'pearson')
 cor.test(t5.교통량,t5.미세먼지)
 
 
+
+# 2019 요일별 상관관계 분석 
+cor(tt_2019$traffic,tt_2019$pm10, use='complete.obs', method = 'pearson')
+cor.test(tt_2019$traffic,tt_2019$pm10)
+tt_2019
+
+#2018 요일별 상관관계 분석 
+ttt_2019 <- cbind(tt_2019,air_y2018$pm10)
+cor(ttt_2019$traffic,ttt_2019$pm10, use='complete.obs', method = 'pearson')
+cor.test(ttt_2019$traffic,ttt_2019$pm10)
+
+
+
+
 #스피어만, 캔달 상관계수 
 #cor(t5.교통량,t5.미세먼지, use='complete.obs', method = 'spearman')
 #cor.test(t5.교통량,t5.미세먼지, method = 'kendall')
 
+
+# 2019 1분기(1월~3월) 상관관계 산점도 
+t4
+t1913 <- t4[c(1:90),]
+names(t1913) <- c("a1913","tt1913")
+attach(t1913)
+plot(a1913~tt1913,main="2019(1~3 month)-traffic volume~find dust", xlab="find dust", ylab = "traffic")
+t1913
+
+
+
+# 2019 1분기(1월~3월) 상관관계 분석 - 피어슨의 상관계수
+
+cor(tt1913,a1813, use='complete.obs', method = 'pearson')
+cor.test(tt1913,a1913)
 
 
 
@@ -148,7 +245,7 @@ t8<-data.frame(t8)
 t8
 names(t8)<- c("t8.a","t8.t")
 attach(t8)
-plot(t8.t~t8.a)
+plot(t8.t~t8.a,main="2018-traffic volume~find dust", xlab="find dust", ylab = "traffic")
 
 # 2020 상관관계 분석 - 피어슨의 상관계수 이용 
 cov(t8.a,t8.t)
