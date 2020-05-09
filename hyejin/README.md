@@ -2,6 +2,7 @@
 ------------------
 > Contributor : 임혜진
 
+
 분석 항목
 -------------------
 1. 중국 도시의 미세먼지 농도는 서울 미세먼지 농도 증가에 영향을 미치는가
@@ -10,9 +11,11 @@
   * 중국 베이징의 미세먼지 농도는 서울 미세먼지 농도에 영향을 미치는가
   * 중국 상하이의 미세먼지 농도는 서울 미세먼지 농도에 영향을 미치는가
 
+
 데이터 수집
 --------------------
 [중국 & 서울 미세먼지 데이터](https://aqicn.org/data-platform/register/kr/)
+
 
 데이터 분석
 --------------------
@@ -20,19 +23,40 @@
 2. 분석에 들어가기 앞서, pm10(미세먼지)에 결측치가 있는 것으로 보여 그 전날의 미세먼지 농도를 결측치에 넣어줌
 3. R에서 테이블을 outer join과 grouping 하는 과정에서 생긴 결측치들은 제거한 뒤 분석을 진행하였음
 
+
 분석 결과
 ---------------------
 1. 중국 18개의 도시의 미세먼지와 서울 미세먼지의 산점도 및 연도별 현황
-<img src="./screenshot/correlation graph between china and korea.png" width="300"> 
+
+<img src="./screenshot/correlation graph between china and korea.png"> 
+
 
 2. 중국 18개의 도시의 미세먼지와 서울 미세먼지의 연도별 그래프 및 연도별 1월부터 4월까지의 그래프
+
 <img src="./screenshot/graph over 7 years.PNG" width="300"> <img src="./screenshot/graph from jan to apr.PNG" width="300" height = "359">
 
-3. 중국 산동성의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+
+3. 중국 산동성의 미세먼지와 서울 미세먼지의 산점도 월별 그래프
+<img src="./screenshot/correlation graph between shandong and seoul.PNG">
+
 <img src="./screenshot/graph between shandong and seoul.PNG">
 
-3. 중국 베이징의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+
+4. 중국 베이징의 미세먼지와 서울 미세먼지의 산점도 월별 그래프
+<img src="./screenshot/correlation graph between beijing and seoul.PNG">
+
 <img src="./screenshot/graph between beijing and seoul.PNG">
 
-3. 중국 상하이의 미세먼지와 서울 미세먼지의 연도별 및 월별 그래프
+
+5. 중국 상하이의 미세먼지와 서울 미세먼지의 산점도 월별 그래프
+<img src="./screenshot/correlation graph between shanghai and seoul.PNG">
+
 <img src="./screenshot/graph between shanghai and seoul.PNG">
+
+
+결과
+------------------------
+1. 중국 18개의 도시의 미세먼지와 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
+2. 중국 산동성의 미세먼지와 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
+3. 중국 베이징의 미세먼지와 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
+4. 중국 상하이의 미세먼지와 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
