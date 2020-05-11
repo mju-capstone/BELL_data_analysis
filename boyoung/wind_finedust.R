@@ -234,3 +234,98 @@ e = ggplot(agg_data18, aes(x=풍향2, y=pm10, fill=pm10))+
   geom_bar(stat='identity')+theme_light()+
   scale_fill_gradient(low='white', high='red', limits=c(20, 50))
 e + coord_polar()
+
+# 계절별 데이터프레임 만들기
+data14$시간 <- as.Date(data14$시간)
+data15$시간 <- as.Date(data15$시간)
+data16$시간 <- as.Date(data16$시간)
+data17$시간 <- as.Date(data17$시간)
+data18$시간 <- as.Date(data18$시간)
+
+spring <- subset(data14, 시간>="2014-03-01 00:00" & 시간<="2014-05-31 23:00")
+spring <- rbind(spring, subset(data15, 시간>="2015-03-01 00:00" & 시간<="2015-05-31 23:00"))
+spring <- rbind(spring, subset(data16, 시간>="2016-03-01 00:00" & 시간<="2016-05-31 23:00"))
+spring <- rbind(spring, subset(data17, 시간>="2017-03-01 00:00" & 시간<="2017-05-31 23:00"))
+spring <- rbind(spring, subset(data18, 시간>="2018-03-01 00:00" & 시간<="2018-05-31 23:00"))
+
+summer <- subset(data14, 시간>="2014-06-01 00:00" & 시간<="2014-08-31 23:00")
+summer <- rbind(summer, subset(data15, 시간>="2015-06-01 00:00" & 시간<="2015-08-31 23:00"))
+summer <- rbind(summer, subset(data16, 시간>="2016-06-01 00:00" & 시간<="2016-08-31 23:00"))
+summer <- rbind(summer, subset(data17, 시간>="2017-06-01 00:00" & 시간<="2017-08-31 23:00"))
+summer <- rbind(summer, subset(data18, 시간>="2018-06-01 00:00" & 시간<="2018-08-31 23:00"))
+
+fall <- subset(data14, 시간>="2014-09-01 00:00" & 시간<="2014-11-30 23:00")
+fall <- rbind(fall, subset(data15, 시간>="2015-09-01 00:00" & 시간<="2015-11-30 23:00"))
+fall <- rbind(fall, subset(data16, 시간>="2016-09-01 00:00" & 시간<="2016-11-30 23:00"))
+fall <- rbind(fall, subset(data17, 시간>="2017-09-01 00:00" & 시간<="2017-11-30 23:00"))
+fall <- rbind(fall, subset(data18, 시간>="2018-09-01 00:00" & 시간<="2018-11-30 23:00"))
+
+winter <- subset(data14, 시간>="2014-12-01 00:00" & 시간<="2014-12-31 23:00")
+winter <- rbind(winter, subset(data14, 시간>="2014-01-01 00:00" & 시간<="2014-02-28 23:00"))
+winter <- rbind(winter, subset(data15, 시간>="2015-12-01 00:00" & 시간<="2015-12-31 23:00"))
+winter <- rbind(winter, subset(data15, 시간>="2015-01-01 00:00" & 시간<="2015-02-28 23:00"))
+winter <- rbind(winter, subset(data16, 시간>="2016-12-01 00:00" & 시간<="2016-12-31 23:00"))
+winter <- rbind(winter, subset(data16, 시간>="2016-01-01 00:00" & 시간<="2016-02-29 23:00"))
+winter <- rbind(winter, subset(data17, 시간>="2017-12-01 00:00" & 시간<="2017-12-31 23:00"))
+winter <- rbind(winter, subset(data17, 시간>="2017-01-01 00:00" & 시간<="2017-02-28 23:00"))
+winter <- rbind(winter, subset(data17, 시간>="2018-12-01 00:00" & 시간<="2017-12-31 23:00"))
+winter <- rbind(winter, subset(data17, 시간>="2018-01-01 00:00" & 시간<="2017-02-28 23:00"))
+
+# 계절별로 어떤 방향의 바람이 많이 부는지 집계
+install.packages("dplyr")
+library(dplyr)
+count1 <- count(spring, 풍향2)
+count2 <- count(summer, 풍향2)
+count3 <- count(fall, 풍향2)
+count4 <- count(winter, 풍향2)
+
+
+
+# 계절별 / 풍향별 평균 미세먼지량 집계
+agg_spr <- aggregate(pm10~풍향2, spring, mean)
+agg_spr <- merge(count1, agg_spr, by='풍향2')
+agg_spr$풍향2 <- factor(agg_spr$풍향2, levels=c("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"))
+agg_sum <- aggregate(pm10~풍향2, summer, mean)
+agg_sum <- merge(count2, agg_sum, by='풍향2')
+agg_sum$풍향2 <- factor(agg_sum$풍향2, levels=c("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"))
+agg_fal <- merge(count3, agg_fal, by='풍향2')
+agg_fal <- aggregate(pm10~풍향2, fall, mean)
+agg_fal$풍향2 <- factor(agg_fal$풍향2, levels=c("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"))
+agg_win <- aggregate(pm10~풍향2, winter, mean)
+agg_win <- merge(count4, agg_win, by='풍향2')
+agg_win$풍향2 <- factor(agg_win$풍향2, levels=c("N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"))
+
+
+# 봄 그래프
+library(grid)
+
+x <- ggplot(agg_spr, aes(x=풍향2))
+x <- x + geom_bar(aes(y=count), stat="identity")
+x <- x + geom_line(aes(y=pm10*25), colour="skyblue", size=2, group=1)
+x <- x + scale_y_continuous(sec.axis = sec_axis(~./25, name="pm10"))
+x <- x + annotate("text", x="S", y=650, colour="black", label="풍향별 count")
+x <- x + annotate("text", x="S", y=1450, colour="black", label="pm10")
+x <- x + annotate("segment", x="S", y=600, colour="black", xend="SSW", yend=550, arrow=arrow())
+x <- x + annotate("segment", x="S", y=1400, colour="skyblue", xend="SSW", yend=1350, arrow=arrow())
+x
+
+# 여름 그래프
+y <- ggplot(agg_sum, aes(x=풍향2))
+y <- y + geom_bar(aes(y=count), stat="identity")
+y <- y + geom_line(aes(y=pm10*25), colour="skyblue", size=2, group=1)
+y <- y + scale_y_continuous(sec.axis = sec_axis(~./25, name="pm10"))
+y
+
+# 가을 그래프
+z <- ggplot(agg_fal, aes(x=풍향2))
+z <- z + geom_bar(aes(y=count), stat="identity")
+z <- z + geom_line(aes(y=pm10*25), colour="skyblue", size=2, group=1)
+z <- z + scale_y_continuous(sec.axis = sec_axis(~./25, name="pm10"))
+z
+
+# 겨울 그래프
+w <- ggplot(agg_win, aes(x=풍향2))
+w <- w + geom_bar(aes(y=count), stat="identity")
+w <- w + geom_line(aes(y=pm10*25), colour="skyblue", size=2, group=1)
+w <- w + scale_y_continuous(sec.axis = sec_axis(~./25, name="pm10"))
+w
