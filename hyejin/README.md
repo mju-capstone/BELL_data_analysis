@@ -37,11 +37,11 @@
  
  1-3. 월별 그래프
  
-  <img src="./screenshot/graph between china and seoul.PNG" width="300">
+  <img src="./screenshot/graph between china and seoul.PNG">
  
  1-4. 연도별 1월부터 4월까지 그래프
  
-  <img src="./screenshot/graph between china and seoul from Jan to Apr.PNG" width="300">
+  <img src="./screenshot/graph between china and seoul from Jan to Apr.PNG">
 
 2. 중국 산동성의 미세먼지와 서울 미세먼지 분석
  2-1. 산점도
