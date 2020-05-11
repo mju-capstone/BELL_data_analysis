@@ -28,11 +28,12 @@
 ---------------------
 1. 중국 18개의 도시의 미세먼지와 서울 미세먼지 분석
  1-1. 산점도
+ 
   <img src="./screenshot/correlation graph between china and korea.png"> 
 
  1-2. 연도별 및 1월부터 4월까지 그래프
  
-  <img src="./screenshot/graph between china and seoul since 2014.PNG" height = 400>
+  <img src="./screenshot/graph between china and seoul since 2014.PNG" height = 500>
  
  1-3. 월별 그래프
  
