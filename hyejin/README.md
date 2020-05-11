@@ -31,7 +31,8 @@
  <img src="./screenshot/correlation graph between china and korea.png"> 
 
  1-2. 연도별 그래프 및 연도별 1월부터 4월까지 그래프
- <img src="./screenshot/graph over 7 years.PNG" width="300"> <img src="./screenshot/graph from jan to apr.PNG" width="300" height = "359">
+ <img src="./screenshot/graph over 7 years.PNG">
+ <img src="./screenshot/graph from jan to apr.PNG">
 
  1-3. 월별 그래프
  <img src="./screenshot/graph between china and seoul.PNG" width="300">
@@ -67,7 +68,7 @@
  <img src="./screenshot/graph between shanghai and seoul.PNG">
  
  4-3. 1월부터 4월 그래프
- <img src="./screenshot/graph between shanghai and seoul from Jan to Apr.PNG">
+ <img src="./screenshot/graph between shanghai and seoul for Jan to Apr.PNG">
 
 
 결과
