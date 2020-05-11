@@ -80,10 +80,11 @@ china_finedust <- merge(x = china_finedust, y = yantai_aqi, by = "date", all =TR
 china_finedust <- merge(x = china_finedust, y = zaozhung_aqi, by = "date", all =TRUE)
 china_finedust <- merge(x = china_finedust, y = zibo_aqi, by = "date", all =TRUE)
 
-sum(is.na(china_finedust)) #check how many na is
+sum(is.na(china_finedust)) # check the number of NA
+china_finedust <- na.omit(china_finedust)
 
 # average pm for per day
-c_f <- china_finedust[, c(2:19)]
+c_f <- china_finedust[, c(2:19)] # can't calculate average bc date
 china_finedust$average <- rowMeans(c_f, na.rm=TRUE)
 
 # table for fine dust in Kore and China
