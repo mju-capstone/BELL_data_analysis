@@ -468,6 +468,7 @@ aqidata2020_ggdf = data.frame(sido_nm=sido_nm2, aqi=aqi2020plot)
 aqidata2019_ggdf = data.frame(sido_nm=sido_nm2, aqi=aqi2019plot)
 aqidata2018_ggdf = data.frame(sido_nm=sido_nm2, aqi=aqi2018plot)
 
+# 연도별 plot
 
 ggplot(data=aqidata2020_ggdf, aes(x=sido_nm, y=aqi)) + geom_bar(stat="identity", fill="steelblue", width = 0.5) + coord_cartesian(ylim=c(20,70))
 
@@ -475,6 +476,21 @@ ggplot(data=aqidata2019_ggdf, aes(x=sido_nm, y=aqi)) + geom_bar(stat="identity",
 
 ggplot(data=aqidata2018_ggdf, aes(x=sido_nm, y=aqi)) + geom_bar(stat="identity", fill="steelblue", width = 0.5) + coord_cartesian(ylim=c(20,70))
 
+
+
+# new plot (한 번에)
+
+aqidata2020df = data.frame(sido_nm=sido_nm2, aqi=aqi2020plot, year=c(2020))
+aqidata2019df = data.frame(sido_nm=sido_nm2, aqi=aqi2019plot, year=c(2019))
+aqidata2018df = data.frame(sido_nm=sido_nm2, aqi=aqi2018plot, year=c(2018))
+
+aqiallDF = rbind(aqidata2020df, aqidata2019df, aqidata2018df)
+
+str(aqiallDF)
+
+aqiallDF$year <- factor(aqiallDF$year, levels = c(2018,2019,2020), labels = c(2018,2019,2020))
+
+ggplot(aqiallDF, aes(x=sido_nm, y=aqi, fill=year)) + geom_bar(stat="identity", position="dodge")
 
 
 
