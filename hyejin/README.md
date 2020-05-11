@@ -27,6 +27,7 @@
 분석 결과
 ---------------------
 1. 중국 18개의 도시의 미세먼지와 서울 미세먼지 분석
+
  1-1. 산점도
  
   <img src="./screenshot/correlation graph between china and korea.png"> 
@@ -44,6 +45,7 @@
   <img src="./screenshot/graph between china and seoul from Jan to Apr.PNG">
 
 2. 중국 산동성의 미세먼지와 서울 미세먼지 분석
+
  2-1. 산점도
  
   <img src="./screenshot/correlation graph between shandong and seoul.PNG">
@@ -57,6 +59,7 @@
   <img src="./screenshot/graph between shandong and seoul from Jan to Apr.PNG">
 
 3. 중국 베이징의 미세먼지와 서울 미세먼지 분석
+
  3-1. 산점도
  
   <img src="./screenshot/correlation graph between beijing and seoul.PNG">
