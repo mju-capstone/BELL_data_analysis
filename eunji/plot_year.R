@@ -486,14 +486,9 @@ aqidata2018df = data.frame(sido_nm=sido_nm2, aqi=aqi2018plot, year=c(2018))
 
 aqiallDF = rbind(aqidata2020df, aqidata2019df, aqidata2018df)
 
-str(aqiallDF)
-
+# year 열을 factor 로 변환하기
 aqiallDF$year <- factor(aqiallDF$year, levels = c(2018,2019,2020), labels = c(2018,2019,2020))
 
-ggplot(aqiallDF, aes(x=sido_nm, y=aqi, fill=year)) + geom_bar(stat="identity", position="dodge")
-
-
-
-
-
+# 그래프 그리기 
+ggplot(aqiallDF, aes(x=sido_nm, y=aqi, fill=year)) + geom_bar(stat="identity", position="dodge", width = 0.5) + coord_cartesian(ylim=c(20,65))
 
