@@ -76,17 +76,15 @@
 
 ### 분석 결과
 
-1. 2020년 미세먼지 농도
+1. 2020~2018 미세먼지 농도
 
-<img src="./screenshot/2020plot.png" width="600">
+<img src="./screenshot/3yearplot.png" width="600">
 
-2. 2019년 미세먼지 농도
 
-<img src="./screenshot/2019plot.png" width="600">
+2. (버리기 아까운 ㅎ) 연도별 그래프 : 차례대로 2018,2019,2020 
 
-3. 2018년 미세먼지 농도
+<img src="./screenshot/2018plot.png" width="250"> <img src="./screenshot/2019plot.png" width="250"> <img src="./screenshot/2020plot.png" width="250">
 
-<img src="./screenshot/2018plot.png" width="600">
 
 ### 결론
 
@@ -94,9 +92,6 @@
 이는 2020년 초, 코로나의 영향으로 중국의 공장 가동률이 낮았기 때문이라고 추측이 가능하다.   
 
 따라서, 우리나라 미세먼지의 농도는 중국의 영향을 많이 받는다고 추측할 수 있다. 
-
-
-
 
 
 
