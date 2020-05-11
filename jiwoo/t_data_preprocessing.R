@@ -289,6 +289,7 @@ air2018 <- subset(air, 일자>="2018-01-01" & 일자<"2019-01-01" )
 daily_air <-data.frame(arrange(air2018, 일자))
 
 
+
 #결측값 평균치로 대체 
 air_mean_0 <- mean(daily_air[,2], na.rm=TRUE)
 daily_air$pm10[is.na(daily_air$pm10)] <- air_mean_0
