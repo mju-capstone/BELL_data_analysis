@@ -161,3 +161,157 @@ bgg7
 
 library('gridExtra')
 grid.arrange(bgg1, bgg2, bgg3, bgg4, bgg5, bgg6, bgg7, ncol=3)
+
+
+# visualization from Jan to Apr
+  # 2014
+beijing_seoul_finedust201414 <- beijing_seoul_finedust2014
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("5", beijing_seoul_finedust201414$month),]
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("6", beijing_seoul_finedust201414$month),]
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("7", beijing_seoul_finedust201414$month),]
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("8", beijing_seoul_finedust201414$month),]
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("9", beijing_seoul_finedust201414$month),]
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("10", beijing_seoul_finedust201414$month),]
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("11", beijing_seoul_finedust201414$month),]
+beijing_seoul_finedust201414 <- beijing_seoul_finedust201414[-grep("12", beijing_seoul_finedust201414$month),]
+
+    # correlation value = 0.8501294
+cor(beijing_seoul_finedust201414$beijing_pm10, beijing_seoul_finedust201414$seoul_pm10, use=("complete.obs"))
+plot(beijing_seoul_finedust201414$beijing_pm10, beijing_seoul_finedust201414$seoul_pm10)
+
+bgg201414 <- ggplot(beijing_seoul_finedust201414, aes(month, beijing_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Beijing and Seoul from Jan to Apr in 2014") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
+bgg201414 <- bgg201414+geom_line(aes(month, seoul_pm10), color = 'blue')
+bgg201414
+
+
+  # 2015
+beijing_seoul_finedust201514 <- beijing_seoul_finedust2015
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("5", beijing_seoul_finedust201514$month),]
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("6", beijing_seoul_finedust201514$month),]
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("7", beijing_seoul_finedust201514$month),]
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("8", beijing_seoul_finedust201514$month),]
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("9", beijing_seoul_finedust201514$month),]
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("10", beijing_seoul_finedust201514$month),]
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("11", beijing_seoul_finedust201514$month),]
+beijing_seoul_finedust201514 <- beijing_seoul_finedust201514[-grep("12", beijing_seoul_finedust201514$month),]
+
+    # correlation value = -0.4927243
+cor(beijing_seoul_finedust201514$beijing_pm10, beijing_seoul_finedust201514$seoul_pm10, use=("complete.obs"))
+plot(beijing_seoul_finedust201514$beijing_pm10, beijing_seoul_finedust201514$seoul_pm10)
+
+bgg201514 <- ggplot(beijing_seoul_finedust201514, aes(month, beijing_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Beijing and Seoul from Jan to Apr in 2015") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
+bgg201514 <- bgg201514+geom_line(aes(month, seoul_pm10), color = 'blue')
+bgg201514
+
+
+  # 2016
+beijing_seoul_finedust201614 <- beijing_seoul_finedust2016
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("5", beijing_seoul_finedust201614$month),]
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("6", beijing_seoul_finedust201614$month),]
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("7", beijing_seoul_finedust201614$month),]
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("8", beijing_seoul_finedust201614$month),]
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("9", beijing_seoul_finedust201614$month),]
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("10", beijing_seoul_finedust201614$month),]
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("11", beijing_seoul_finedust201614$month),]
+beijing_seoul_finedust201614 <- beijing_seoul_finedust201614[-grep("12", beijing_seoul_finedust201614$month),]
+
+    # correlation value = 0.9964439
+cor(beijing_seoul_finedust201614$beijing_pm10, beijing_seoul_finedust201614$seoul_pm10, use=("complete.obs"))
+plot(beijing_seoul_finedust201614$beijing_pm10, beijing_seoul_finedust201614$seoul_pm10)
+
+bgg201614 <- ggplot(beijing_seoul_finedust201614, aes(month, beijing_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Beijing and Seoul from Jan to Apr in 2016") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
+bgg201614 <- bgg201614+geom_line(aes(month, seoul_pm10), color = 'blue')
+bgg201614
+
+
+
+  # 2017
+beijing_seoul_finedust201714 <- beijing_seoul_finedust2017
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("5", beijing_seoul_finedust201714$month),]
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("6", beijing_seoul_finedust201714$month),]
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("7", beijing_seoul_finedust201714$month),]
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("8", beijing_seoul_finedust201714$month),]
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("9", beijing_seoul_finedust201714$month),]
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("10", beijing_seoul_finedust201714$month),]
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("11", beijing_seoul_finedust201714$month),]
+beijing_seoul_finedust201714 <- beijing_seoul_finedust201714[-grep("12", beijing_seoul_finedust201714$month),]
+
+    # correlation value = 0.5738404
+cor(beijing_seoul_finedust201714$beijing_pm10, beijing_seoul_finedust201714$seoul_pm10, use=("complete.obs"))
+plot(beijing_seoul_finedust201714$beijing_pm10, beijing_seoul_finedust201714$seoul_pm10)
+
+bgg201714 <- ggplot(beijing_seoul_finedust201714, aes(month, beijing_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Beijing and Seoul from Jan to Apr in 2017") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
+bgg201714 <- bgg201714+geom_line(aes(month, seoul_pm10), color = 'blue')
+bgg201714
+
+
+  # 2018
+beijing_seoul_finedust201814 <- beijing_seoul_finedust2018
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("5", beijing_seoul_finedust201814$month),]
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("6", beijing_seoul_finedust201814$month),]
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("7", beijing_seoul_finedust201814$month),]
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("8", beijing_seoul_finedust201814$month),]
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("9", beijing_seoul_finedust201814$month),]
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("10", beijing_seoul_finedust201814$month),]
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("11", beijing_seoul_finedust201814$month),]
+beijing_seoul_finedust201814 <- beijing_seoul_finedust201814[-grep("12", beijing_seoul_finedust201814$month),]
+
+    # correlation value = -0.2134356
+cor(beijing_seoul_finedust201814$beijing_pm10, beijing_seoul_finedust201814$seoul_pm10, use=("complete.obs"))
+plot(beijing_seoul_finedust201814$beijing_pm10, beijing_seoul_finedust201814$seoul_pm10)
+
+bgg201814 <- ggplot(beijing_seoul_finedust201814, aes(month, beijing_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Beijing and Seoul from Jan to Apr in 2018") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
+bgg201814 <- bgg201814+geom_line(aes(month, seoul_pm10), color = 'blue')
+bgg201814
+
+
+  # 2019
+beijing_seoul_finedust201914 <- beijing_seoul_finedust2019
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("5", beijing_seoul_finedust201914$month),]
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("6", beijing_seoul_finedust201914$month),]
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("7", beijing_seoul_finedust201914$month),]
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("8", beijing_seoul_finedust201914$month),]
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("9", beijing_seoul_finedust201914$month),]
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("10", beijing_seoul_finedust201914$month),]
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("11", beijing_seoul_finedust201914$month),]
+beijing_seoul_finedust201914 <- beijing_seoul_finedust201914[-grep("12", beijing_seoul_finedust201914$month),]
+
+    # correlation value = -0.9974315
+cor(beijing_seoul_finedust201914$beijing_pm10, beijing_seoul_finedust201914$seoul_pm10, use=("complete.obs"))
+plot(beijing_seoul_finedust201914$beijing_pm10, beijing_seoul_finedust201914$seoul_pm10)
+
+bgg201914 <- ggplot(beijing_seoul_finedust201914, aes(month, beijing_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Beijing and Seoul from Jan to Apr in 2019") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
+bgg201914 <- bgg201914+geom_line(aes(month, seoul_pm10), color = 'blue')
+bgg201914
+
+
+  # 2020
+beijing_seoul_finedust202014 <- beijing_seoul_finedust2020
+
+  # correlation value = 0.681181
+cor(beijing_seoul_finedust202014$beijing_pm10, beijing_seoul_finedust202014$seoul_pm10, use=("complete.obs"))
+plot(beijing_seoul_finedust202014$beijing_pm10, beijing_seoul_finedust202014$seoul_pm10)
+
+bgg202014 <- ggplot(beijing_seoul_finedust202014, aes(month, beijing_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Beijing and Seoul from Jan to Apr in 2020") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
+bgg202014 <- bgg202014+geom_line(aes(month, seoul_pm10), color = 'blue')
+bgg202014
+
+grid.arrange(bgg201414, bgg201514, bgg201614, bgg201714, bgg201814, bgg201914, bgg202014, ncol=3)
+
+
+# write csv
+write.csv(beijing_seoul_finedust2014, file="beijing_seoul_finedust2014.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust2015, file="beijing_seoul_finedust2015.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust2016, file="beijing_seoul_finedust2016.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust2017, file="beijing_seoul_finedust2017.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust2018, file="beijing_seoul_finedust2018.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust2019, file="beijing_seoul_finedust2019.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust2020, file="beijing_seoul_finedust2020.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust201414, file="beijing_seoul_finedust201414.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust201514, file="beijing_seoul_finedust201514.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust201614, file="beijing_seoul_finedust201614.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust201714, file="beijing_seoul_finedust201714.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust201814, file="beijing_seoul_finedust201814.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust201914, file="beijing_seoul_finedust201914.csv", row.names=TRUE)
+write.csv(beijing_seoul_finedust202014, file="beijing_seoul_finedust202014.csv", row.names=TRUE)
+
