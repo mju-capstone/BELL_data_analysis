@@ -61,22 +61,21 @@ Contributor :raising_hand: : [이지우](https://github.com/lee-jiu, "이지우"
     
       2018년 
   <img width="500" src="https://user-images.githubusercontent.com/56306637/81067801-3a676e00-8f1a-11ea-8b53-d7436165f688.PNG">   
-  상관계수가 0.03이므로 거의 무시될 수 있는 선형관계에 해당.   
-  p-value가 0.05보다 크므로 귀무가설 채택. 즉, 두 변수간 상관관계가 없다고 판단 가능   
+  상관계수가 0.03이므로 거의 무시될 수 있는 선형관계에 해당.     
   
   
 
     2019년 
   <img width="500" src="https://user-images.githubusercontent.com/56306637/81067805-3cc9c800-8f1a-11ea-9c64-78621de657ff.PNG">   
   상관계수가 -0.08이므로 거의 무시될 수 있는 선형관계에 해당.  
-  p-value가 0.05보다 크므로 귀무가설 채택. 즉 두 변수간 상관관계가 없다고 판단 가능  
+
    
    
      2020년 
   <img width="500" src="https://user-images.githubusercontent.com/56306637/81067807-3dfaf500-8f1a-11ea-942d-59d569c5e812.PNG">   
   앞선 두 년도와는 다른 분석 결과  
   상관계수가 0.24이므로 약한 양적 선형관계에 해당.  
-- p-value가 0.05보다 작으므로 귀무가설 기각, 즉 두 변수간 상관관계가 있다고 판단 가능 
+ 
  
  
  * * *  
