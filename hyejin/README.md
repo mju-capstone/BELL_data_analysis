@@ -30,16 +30,13 @@
  1-1. 산점도
  <img src="./screenshot/correlation graph between china and korea.png"> 
 
- 1-2. 연도별 그래프
- <img src="./screenshot/graph over 7 years.PNG">
- 
- 1-3. 1월부터 4월까지 그래프
- <img src="./screenshot/graph from jan to apr.PNG">
+ 1-2. 연도별 및 1월부터 4월까지 그래프
+ <img src="./screenshot/graph between china and seoul since 2014.PNG">
 
- 1-4. 월별 그래프
+ 1-3. 월별 그래프
  <img src="./screenshot/graph between china and seoul.PNG" width="300">
  
- 1-5. 연도별 1월부터 4월까지 그래프
+ 1-4. 연도별 1월부터 4월까지 그래프
  <img src="./screenshot/graph between china and seoul from Jan to Apr.PNG" width="300">
 
 2. 중국 산동성의 미세먼지와 서울 미세먼지 분석
