@@ -46,34 +46,43 @@
 
 <img src="https://user-images.githubusercontent.com/33210702/80915733-2ba08000-8d8f-11ea-95c9-15bc41132b33.png">
 
+- 2019년 풍향별 미세먼지 농도
+
+<img src="https://user-images.githubusercontent.com/33210702/81633651-32428d80-9448-11ea-9f10-267c63eb4dd0.png">
+
+- 2020(1월~4월)년 풍향별 미세먼지 농도
+
+<img src="https://user-images.githubusercontent.com/33210702/81633657-340c5100-9448-11ea-9acf-3b3bd231703c.png">
+
 ### 2. 계절이 풍향과 미세먼지 농도에 영항을 미치는가?
 
-- 2014년~2018년 5년동안의 풍향의 빈도 수와 평균 미세먼지 농도 데이터를 계절별로 집계함.
+- 2014년~2019년 5년동안의 풍향의 빈도 수와 평균 미세먼지 농도 데이터를 계절별로 집계함.
 
 ## 분석결과
 
-- 2014년~2018년 봄의 풍향별 빈도수와 평균 미세먼지 농도
+- 2014년~2019년 봄의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81082500-4fe69300-8f2e-11ea-80c5-81e1e44714ef.png">
+<img src="https://user-images.githubusercontent.com/33210702/81633665-39699b80-9448-11ea-87c5-0969dfe1ae8c.png">
 
 -> 편서풍의 영향을 많이 받는 봄에 서풍 계열 바람이 강하고 미세먼지 농도 또한 대체로 높음
 
-- 2014년~2018년 여름의 풍향별 빈도수와 평균 미세먼지 농도
+- 2014년~2019년 여름의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81082506-5248ed00-8f2e-11ea-8200-44bfe13ad8f4.png">
+<img src="(https://user-images.githubusercontent.com/33210702/81633669-3b335f00-9448-11ea-82e8-dc3e49308e60.png">
 
 -> 다른 계절에 비해 남동풍 계열 바람 빈도수가 높은 편이고 미세먼지 농도가 대체적으로 낮음
 
-- 2014년~2018년 가을의 풍향별 빈도수와 평균 미세먼지 농도
+- 2014년~2019년 가을의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81082511-537a1a00-8f2e-11ea-93e2-abd605b89517.png">
+<img src="https://user-images.githubusercontent.com/33210702/81633673-3d95b900-9448-11ea-9744-4200ddd20c73.png">
 
 *몰랐는데 찾아보니까 우리나라의 가을에는 북동풍(오호츠크해 기단 영향)이 많이 분다고 함*
+
 -> 북풍, 동풍 계열 바람이 강하게 나타났고, 봄과 겨울에 비해 미세먼지 농도 또한 낮게 나타남
 
-- 2014년~2018년 겨울의 풍향별 빈도수와 평균 미세먼지 농도
+- 2014년~2019년 겨울의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81084190-845b4e80-8f30-11ea-8903-5d053296c663.png">
+<img src="https://user-images.githubusercontent.com/33210702/81633678-3f5f7c80-9448-11ea-8ac5-496d3239d21c.png">
 
 -> 북서계절풍의 영향을 많이 받는 겨울에는 북서풍 빈도수가 매우 높고 전체적인 미세먼지 농도 또한 높음
 
