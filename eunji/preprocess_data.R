@@ -317,7 +317,6 @@ gyeongnam2018 = mean(gyeongnam_aqi2018$pm10, na.rm = TRUE)
 gyeongnam2018_2 = mean(gyeongnam_aqi2018$pm25, na.rm = TRUE)
 
 
-
 # preprocess jeju
 jeju_aqi = read.csv("./aqidata/jeju.csv")
 
@@ -332,7 +331,6 @@ jeju2019_2 = mean(jeju_aqi2019$pm25, na.rm = TRUE)
 jeju_aqi2018 = jeju_aqi[grep("2018/", jeju_aqi$date),]
 jeju2018 = mean(jeju_aqi2018$pm10, na.rm = TRUE)
 jeju2018_2 = mean(jeju_aqi2018$pm25, na.rm = TRUE)
-
 
 
 # 지도에 그릴 미먼 데이터
@@ -386,7 +384,4 @@ aqidata2018 = data.frame(sido_nm=sido_nm, aqi=aqi2018)
 aqidata2020_2 = data.frame(sido_nm=sido_nm, aqi=aqi2020_2)
 aqidata2019_2 = data.frame(sido_nm=sido_nm, aqi=aqi2019_2)
 aqidata2018_2 = data.frame(sido_nm=sido_nm, aqi=aqi2018_2)
-
-
-
 
