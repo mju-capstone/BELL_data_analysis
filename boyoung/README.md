@@ -54,6 +54,10 @@
 
 <img src="https://user-images.githubusercontent.com/33210702/81633657-340c5100-9448-11ea-9acf-3b3bd231703c.png">
 
+- 2014년~2020년(1월~4월) 동안 미세먼지 농도가 100㎍/㎥ 이상일 때의 풍향을 나타낸 그래프
+
+<img src="https://user-images.githubusercontent.com/33210702/81637722-06c4a080-9452-11ea-9c83-bedb322e5f02.png">
+
 ### 2. 계절이 풍향과 미세먼지 농도에 영항을 미치는가?
 
 - 2014년~2019년 5년동안의 풍향의 빈도 수와 평균 미세먼지 농도 데이터를 계절별로 집계함.
@@ -62,19 +66,19 @@
 
 - 2014년~2019년 봄의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81633665-39699b80-9448-11ea-87c5-0969dfe1ae8c.png">
+<img src="https://user-images.githubusercontent.com/33210702/81637860-602ccf80-9452-11ea-8034-3f58ef8293ef.png">
 
 -> 편서풍의 영향을 많이 받는 봄에 서풍 계열 바람이 강하고 미세먼지 농도 또한 대체로 높음
 
 - 2014년~2019년 여름의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81633669-3b335f00-9448-11ea-82e8-dc3e49308e60.png">
+<img src="https://user-images.githubusercontent.com/33210702/81637862-6327c000-9452-11ea-8328-5ee0f5ad9232.png">
 
 -> 다른 계절에 비해 남동풍 계열 바람 빈도수가 높은 편이고 미세먼지 농도가 대체적으로 낮음
 
 - 2014년~2019년 가을의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81633673-3d95b900-9448-11ea-9744-4200ddd20c73.png">
+<img src="https://user-images.githubusercontent.com/33210702/81637869-64f18380-9452-11ea-930c-f10ed9a339e5.png">
 
 *몰랐는데 찾아보니까 우리나라의 가을에는 북동풍(오호츠크해 기단 영향)이 많이 분다고 함*
 
@@ -82,7 +86,7 @@
 
 - 2014년~2019년 겨울의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="https://user-images.githubusercontent.com/33210702/81633678-3f5f7c80-9448-11ea-8ac5-496d3239d21c.png">
+<img src="https://user-images.githubusercontent.com/33210702/81637871-6622b080-9452-11ea-9943-0e183ca04b8d.png">
 
 -> 북서계절풍의 영향을 많이 받는 겨울에는 북서풍 빈도수가 매우 높고 전체적인 미세먼지 농도 또한 높음
 
