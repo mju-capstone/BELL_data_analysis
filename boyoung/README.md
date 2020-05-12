@@ -68,7 +68,7 @@
 
 - 2014년~2019년 여름의 풍향별 빈도수와 평균 미세먼지 농도
 
-<img src="(https://user-images.githubusercontent.com/33210702/81633669-3b335f00-9448-11ea-82e8-dc3e49308e60.png">
+<img src="https://user-images.githubusercontent.com/33210702/81633669-3b335f00-9448-11ea-82e8-dc3e49308e60.png">
 
 -> 다른 계절에 비해 남동풍 계열 바람 빈도수가 높은 편이고 미세먼지 농도가 대체적으로 낮음
 
