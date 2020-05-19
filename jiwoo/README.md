@@ -112,7 +112,13 @@ Contributor :raising_hand: : [이지우](https://github.com/lee-jiu, "이지우"
   - 서울시 교통량-미세먼지 농도의 주중 및 주말별 상관관계 분석을 진행  
   - 주중과 주말 데이터를 분리해 주중별, 주말별 상관관계 분석 
   
-  ### 주중 
+  ### 주중  
+  - 상관관계 산점도 
+  
+  
+   <img width="400" src="https://user-images.githubusercontent.com/56306637/82301342-0fd5e480-99f3-11ea-8146-09175a01ed62.PNG"><img width="400" src="https://user-images.githubusercontent.com/56306637/82301361-17958900-99f3-11ea-9d4d-28d81f4c728f.PNG">    
+   
+   
    - 주중 교통량-미세먼지 상관관계 (일별 통계 데이터 기준) 
  <img width="400" src="https://user-images.githubusercontent.com/56306637/81698151-8b3e1000-94a0-11ea-9a6f-ec90125e24bb.PNG">    
   
