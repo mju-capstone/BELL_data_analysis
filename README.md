@@ -116,6 +116,8 @@
 
 # 4번 분석항목 : 풍향과 서울시 미세먼지 농도의 상관 관계
 
+> contributor 👩‍💻 : [김보영]()
+
 ## 데이터 수집
 
 - [종관기상관측(ASOS)](https://data.kma.go.kr/data/grnd/selectAsosRltmList.do?pgmNo=36&tabNo=1) : 종관기상관측이란 종관규모의 날씨를 파악하기 위하여 정해진 시각에 모든 관측소에서 같은 시각에 실시하는 지상관측을 말함.
