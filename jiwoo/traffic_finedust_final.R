@@ -225,3 +225,12 @@ f5
 cc52018
 
 
+plot(d2$t_sum~d2$pm10, ylim = c(6000000, 11000000))
+ggplot(d2, aes(x=pm10, y=t_sum)) + geom_point(shape=19, size=2, color='pink') + 
+  ggtitle("Correlation analysis between Seoul findeust and seoul traffic") + 
+  theme(plot.title = element_text(size=10, hjust=0.5)) +
+  coord_cartesian(ylim = c(6000000, 11000000))
+
+
+
+
