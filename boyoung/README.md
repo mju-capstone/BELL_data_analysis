@@ -68,37 +68,25 @@
 
 ## 분석결과
 
-- 2014년~2019년 봄철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향
+- 2014년~2019년 봄철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향 / 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
 
-<img src="https://user-images.githubusercontent.com/33210702/82300544-f6806880-99f1-11ea-867c-588fa5809c98.png">
+<img src="https://user-images.githubusercontent.com/33210702/82300544-f6806880-99f1-11ea-867c-588fa5809c98.png" width="400" height="415"><img src="https://user-images.githubusercontent.com/33210702/82300548-f8e2c280-99f1-11ea-8e39-20bc3fd6e5ee.png" width="400" height="415">
 
-- 2014년~2019년 봄철 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
 
-<img src="https://user-images.githubusercontent.com/33210702/82300548-f8e2c280-99f1-11ea-8e39-20bc3fd6e5ee.png">
+- 2014년~2019년 여름철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향 / 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
 
-- 2014년~2019년 여름철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향
 
-<img src="https://user-images.githubusercontent.com/33210702/82300553-faac8600-99f1-11ea-8468-17e7fd28c43c.png">
+<img src="https://user-images.githubusercontent.com/33210702/82300553-faac8600-99f1-11ea-8468-17e7fd28c43c.png" width="400" height="415"><img src="https://user-images.githubusercontent.com/33210702/82300558-fbddb300-99f1-11ea-9d52-33ea5a0d1680.png" width="400" height="415">
 
-- 2014년~2019년 여름철 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
+- 2014년~2019년 가을철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향 / 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
 
-<img src="https://user-images.githubusercontent.com/33210702/82300558-fbddb300-99f1-11ea-9d52-33ea5a0d1680.png">
 
-- 2014년~2019년 가을철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향
+<img src="https://user-images.githubusercontent.com/33210702/82300570-fe400d00-99f1-11ea-9830-802605d7b8ea.png" width="400" height="415"><img src="https://user-images.githubusercontent.com/33210702/82300578-00a26700-99f2-11ea-87fa-1ef1338d321d.png" width="400" height="415">
 
-<img src="https://user-images.githubusercontent.com/33210702/82300570-fe400d00-99f1-11ea-9830-802605d7b8ea.png">
+- 2014년~2019년 겨울철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향 / 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
 
-- 2014년~2019년 가을철 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
 
-<img src="https://user-images.githubusercontent.com/33210702/82300578-00a26700-99f2-11ea-87fa-1ef1338d321d.png">
-
-- 2014년~2019년 겨울철 미세먼지 농도가 50㎍/㎥ 이하일 때의 주풍향
-
-<img src="https://user-images.githubusercontent.com/33210702/82300591-026c2a80-99f2-11ea-8460-b832d80a5fe0.png">
-
-- 2014년~2019년 겨울철 미세먼지 농도가 100㎍/㎥ 초과일 때의 주풍향
-
-<img src="https://user-images.githubusercontent.com/33210702/82300596-0435ee00-99f2-11ea-86ab-7569caa02895.png">
+<img src="https://user-images.githubusercontent.com/33210702/82300591-026c2a80-99f2-11ea-8460-b832d80a5fe0.png" width="400" height="415"><img src="https://user-images.githubusercontent.com/33210702/82300596-0435ee00-99f2-11ea-86ab-7569caa02895.png" width="400" height="415">
 
 
 ## 결론
