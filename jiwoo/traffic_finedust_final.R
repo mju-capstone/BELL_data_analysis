@@ -94,6 +94,7 @@ names(f2020) <- c("fff1","fff2","fff3","fff4","fff5","fff6","fff7")
 f2018
 d4 <- cbind(d2$t_sum,d2$pm10)
 d5 <- cbind(d3$t_sum,d3$pm10)
+
 #weekday
 d4 <- data.frame(d4)
 names(d4) <- c("d_1","d_2")
@@ -113,6 +114,15 @@ dd2
 
 dd3 <-cbind(dd1, dd2$air)
 dd3
+
+
+#weekday -month
+dw1 <- aggregate(d2$t_sum, by=list(d2$c1), FUN=mean)
+dw1
+dw2 <- aggregate(d2$pm10, by=list(d2$c1), FUN=mean)
+dw2
+dw3 <- merge(dw1,dw2, by='Group.1')
+dw3
 
 #month
 c3 <- aggregate(c2$t_sum, by=list(c2$a12,c2$c1), FUN=mean)
@@ -140,6 +150,7 @@ names(d7) <- c("d7_1","d7_2","d7_t","d7_a")
 #c3 <- data.frame(summarise(group_by(c2, a12), t_mean=mean(t_sum), mean=mean(pm10)))
 #c3 <- data.frame(summarise(group_by(c2, c2$c1, c2$a12), mean=mean(t_sum)))
 c3
+
 
 d <- c5[,3:4]
 names(d)<- c("dt","da")
@@ -224,4 +235,26 @@ f5<-bar5+geom_bar(stat="identity", position = "dodge")+ ggtitle("2020 주중 및
 f5
 cc52018
 
+
+
+# finedust&traffic Correlation (weekday)
+
+plot(d2$t_sum~d2$pm10, ylim = c(6000000, 11000000))
+
+
+cov(dw3$x.x, dw3$x.y)
+cor.test(dw3$x.x, dw3$x.y)
+plot(dw3$x.x~dw3$x.y)
+
+
+ggplot(d2, aes(x=pm10, y=t_sum)) + geom_point(shape=19, size=2, color='pink') + xlab("미세먼지 농도(pm10)") + ylab("교통량") +
+  ggtitle("주중 서울시 미세먼지(pm10) 농도와 교통량의 상관관계") + theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
+  theme(plot.title = element_text(size=10, hjust=0.5)) +
+  coord_cartesian(ylim = c(7300000, 11000000)) 
+
+
+ggplot(dw3, aes(x=x.y, y=x.x)) + geom_point(shape=19, size=2, color='skyblue') + xlab("미세먼지 농도(pm10)") + ylab("교통량") +
+  ggtitle("주중 서울시 미세먼지(pm10) 농도와 교통량의 상관관계") + theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
+  theme(plot.title = element_text(size=10, hjust=0.5)) +
+  coord_cartesian(ylim = c(8000000, 10000000), xlim = c(20, 65)) 
 
