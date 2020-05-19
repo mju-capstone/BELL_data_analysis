@@ -10,6 +10,7 @@
   * 중국 산동성 16개의 도시의 미세먼지 농도는 서울 미세먼지 농도에 영향을 미치는가?
   * 중국 베이징의 미세먼지 농도는 서울 미세먼지 농도에 영향을 미치는가?
   * 중국 상하이의 미세먼지 농도는 서울 미세먼지 농도에 영향을 미치는가?
+  * 서풍이 서울 미세먼지 농도에 영향을 미치는가?
 
 
 데이터 수집
@@ -85,6 +86,22 @@
 4-3. 연도별 1월부터 4월 그래프
  
   <img src="./screenshot/graph between shanghai and seoul/graph between shanghai and seoul for Jan to Apr.PNG">
+  
+5. 서풍과 중국 & 서울의 미세먼지 분석
+
+<img src="./screenshot/graph between china and seoul/correlation graph between china and korea in 2014.PNG">
+
+<img src="./screenshot/graph between china and seoul/correlation graph between china and korea in 2015.PNG">
+
+<img src="./screenshot/graph between china and seoul/correlation graph between china and korea in 2016.PNG">
+
+<img src="./screenshot/graph between china and seoul/correlation graph between china and korea in 2017.PNG">
+
+<img src="./screenshot/graph between china and seoul/correlation graph between china and korea in 2018.PNG">
+
+<img src="./screenshot/graph between china and seoul/correlation graph between china and korea in 2019.PNG">
+
+<img src="./screenshot/graph between china and seoul/correlation graph between china and korea in 2020.PNG">
 
 
 결과
@@ -93,3 +110,4 @@
 2. 중국 산동성의 미세먼지와 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
 3. 중국 베이징의 미세먼지와 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
 4. 중국 상하이의 미세먼지와 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
+5. 서풍과 서울 미세먼지의 상관관계를 분석한 결과 뚜렷한 양의 상관관계를 보였음
