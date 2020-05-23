@@ -39,6 +39,9 @@ shandong_seoul_finedust$seoul_average <- ifelse(shandong_seoul_finedust$seoul_av
 boxplot(shandong_seoul_finedust$shandong_average, shandong_seoul_finedust$seoul_average)
 plot(shandong_seoul_finedust$shandong_average, shandong_seoul_finedust$seoul_average)
 
+gg6 <- ggplot(shandong_seoul_finedust, aes(x=seoul_average, y=shandong_average)) + geom_point(shape=19, size=2, color='pink') + xlab("Seoul") + ylab("Shandong") + ggtitle("Correlation analysis between Seoul findeust and Shandong finedust") + theme(plot.title = element_text(size=15, hjust=0.5))
+gg6
+
 # visualization annually
 shandong_seoul_finedust$date <- as.Date(shandong_seoul_finedust$date, format="%Y/%m/%d") # change string to date 
 
@@ -187,8 +190,8 @@ shandong_seoul_finedust201414 <- shandong_seoul_finedust201414[-grep("12", shand
 cor(shandong_seoul_finedust201414$shandong_average, shandong_seoul_finedust201414$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust201414$shandong_average, shandong_seoul_finedust201414$seoul_average)
 
-shgg201414 <- ggplot(shandong_seoul_finedust201414, aes(month, shandong_average, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2014") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
-shgg201414 <- shgg201414+geom_line(aes(month, seoul_average), color = 'blue')
+shgg201414 <- ggplot(shandong_seoul_finedust201414, aes(month, shandong_average, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2014") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shgg201414 <- shgg201414+geom_line(aes(month, seoul_average), color = 'skyblue', size=1)
 shgg201414
 
   # 2015
@@ -206,8 +209,8 @@ shandong_seoul_finedust201514 <- shandong_seoul_finedust201514[-grep("12", shand
 cor(shandong_seoul_finedust201514$shandong_average, shandong_seoul_finedust201514$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust201514$shandong_average, shandong_seoul_finedust201514$seoul_average)
 
-shgg201514 <- ggplot(shandong_seoul_finedust201514, aes(month, shandong_average, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2015") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
-shgg201514 <- shgg201514+geom_line(aes(month, seoul_average), color = 'blue')
+shgg201514 <- ggplot(shandong_seoul_finedust201514, aes(month, shandong_average, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2015") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shgg201514 <- shgg201514+geom_line(aes(month, seoul_average), color = 'skyblue', size=1)
 shgg201514
 
 
@@ -226,8 +229,8 @@ shandong_seoul_finedust201614 <- shandong_seoul_finedust201614[-grep("12", shand
 cor(shandong_seoul_finedust201614$shandong_average, shandong_seoul_finedust201614$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust201614$shandong_average, shandong_seoul_finedust201614$seoul_average)
 
-shgg201614 <- ggplot(shandong_seoul_finedust201614, aes(month, shandong_average, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2016") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
-shgg201614 <- shgg201614+geom_line(aes(month, seoul_average), color = 'blue')
+shgg201614 <- ggplot(shandong_seoul_finedust201614, aes(month, shandong_average, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2016") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shgg201614 <- shgg201614+geom_line(aes(month, seoul_average), color = 'skyblue', size=1)
 shgg201614
 
 
@@ -246,8 +249,8 @@ shandong_seoul_finedust201714 <- shandong_seoul_finedust201714[-grep("12", shand
 cor(shandong_seoul_finedust201714$shandong_average, shandong_seoul_finedust201714$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust201714$shandong_average, shandong_seoul_finedust201714$seoul_average)
 
-shgg201714 <- ggplot(shandong_seoul_finedust201714, aes(month, shandong_average, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2017") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
-shgg201714 <- shgg201714+geom_line(aes(month, seoul_average), color = 'blue')
+shgg201714 <- ggplot(shandong_seoul_finedust201714, aes(month, shandong_average, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2017") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shgg201714 <- shgg201714+geom_line(aes(month, seoul_average), color = 'skyblue', size=1)
 shgg201714
 
 
@@ -266,8 +269,8 @@ shandong_seoul_finedust201814 <- shandong_seoul_finedust201814[-grep("12", shand
 cor(shandong_seoul_finedust201814$shandong_average, shandong_seoul_finedust201814$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust201814$shandong_average, shandong_seoul_finedust201814$seoul_average)
 
-shgg201814 <- ggplot(shandong_seoul_finedust201814, aes(month, shandong_average, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2018") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
-shgg201814 <- shgg201814+geom_line(aes(month, seoul_average), color = 'blue')
+shgg201814 <- ggplot(shandong_seoul_finedust201814, aes(month, shandong_average, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2018") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shgg201814 <- shgg201814+geom_line(aes(month, seoul_average), color = 'skyblue', size=1)
 shgg201814
 
 
@@ -286,8 +289,8 @@ shandong_seoul_finedust201914 <- shandong_seoul_finedust201914[-grep("12", shand
 cor(shandong_seoul_finedust201914$shandong_average, shandong_seoul_finedust201914$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust201914$shandong_average, shandong_seoul_finedust201914$seoul_average)
 
-shgg201914 <- ggplot(shandong_seoul_finedust201914, aes(month, shandong_average, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2019") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
-shgg201914 <- shgg201914+geom_line(aes(month, seoul_average), color = 'blue')
+shgg201914 <- ggplot(shandong_seoul_finedust201914, aes(month, shandong_average, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2019") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shgg201914 <- shgg201914+geom_line(aes(month, seoul_average), color = 'skyblue', size=1)
 shgg201914
 
 
@@ -298,8 +301,8 @@ shandong_seoul_finedust202014 <- shandong_seoul_finedust2020
 cor(shandong_seoul_finedust202014$shandong_average, shandong_seoul_finedust202014$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust202014$shandong_average, shandong_seoul_finedust202014$seoul_average)
 
-shgg202014 <- ggplot(shandong_seoul_finedust202014, aes(month, shandong_average, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2020") + ylab('finedust') + theme(plot.title = element_text(size = 9.5, hjust=0.5))
-shgg202014 <- shgg202014+geom_line(aes(month, seoul_average), color = 'blue')
+shgg202014 <- ggplot(shandong_seoul_finedust202014, aes(month, shandong_average, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shandong and Seoul from Jan to Apr in 2020") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shgg202014 <- shgg202014+geom_line(aes(month, seoul_average), color = 'skyblue', size=1)
 shgg202014
 
 grid.arrange(shgg201414, shgg201514, shgg201614, shgg201714, shgg201814, shgg201914, shgg202014, ncol=3)
@@ -313,3 +316,10 @@ write.csv(shandong_seoul_finedust2017, file="shandong_seoul_finedust2017.csv", r
 write.csv(shandong_seoul_finedust2018, file="shandong_seoul_finedust2018.csv", row.names=TRUE)
 write.csv(shandong_seoul_finedust2019, file="shandong_seoul_finedust2019.csv", row.names=TRUE)
 write.csv(shandong_seoul_finedust2020, file="shandong_seoul_finedust2020.csv", row.names=TRUE)
+write.csv(shandong_seoul_finedust201414, file="shandong_seoul_finedust201414.csv", row.names=TRUE)
+write.csv(shandong_seoul_finedust201514, file="shandong_seoul_finedust201514.csv", row.names=TRUE)
+write.csv(shandong_seoul_finedust201614, file="shandong_seoul_finedust201614.csv", row.names=TRUE)
+write.csv(shandong_seoul_finedust201714, file="shandong_seoul_finedust201714.csv", row.names=TRUE)
+write.csv(shandong_seoul_finedust201814, file="shandong_seoul_finedust201814.csv", row.names=TRUE)
+write.csv(shandong_seoul_finedust201914, file="shandong_seoul_finedust201914.csv", row.names=TRUE)
+write.csv(shandong_seoul_finedust202014, file="shandong_seoul_finedust202014.csv", row.names=TRUE)

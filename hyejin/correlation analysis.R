@@ -16,6 +16,10 @@ finedust_without_na$re_seoul_average <- ifelse(finedust_without_na$seoul_average
 boxplot(finedust_without_na$re_china_average, finedust_without_na$re_seoul_average)
 plot(finedust_without_na$re_china_average, finedust_without_na$re_seoul_average)
 
+# better graph than before
+library(ggplot2)
+gg3 <- ggplot(finedust_without_na, aes(x=re_seoul_average, y=re_china_average)) + geom_point(shape=19, size=2, color='pink') + xlab("Seoul") + ylab("China") + ggtitle("Correlation analysis between Seoul findeust and China finedust") + theme(plot.title = element_text(size=15, hjust=0.5))
+gg3
 
 # visualization(finedust_with_na로 활용) -> too many x values
 plot(finedust_without_na$re_china_average, type='o', col='red', ylim=c(1, 200), xlab='date', ylab='fine dust', main='graph for fine dust over 7 years')
@@ -78,6 +82,9 @@ finedust_d <- finedust_d %>%
 gg3 <- ggplot(finedust_d, aes(year, group_c, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust from Jan to Apr") + ylab('finedust') + theme(plot.title = element_text(size = 15, hjust=0.5))
 gg3 <- gg3+geom_line(aes(year, group_s), color = 'blue')
 gg3
+
+library('gridExtra')
+grid.arrange(gg2, gg3, ncol=2)
 
 
 # visualization annually

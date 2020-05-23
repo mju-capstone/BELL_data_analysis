@@ -18,6 +18,9 @@ shanghai_seoul_finedust$seoul_pm10 <- ifelse(shanghai_seoul_finedust$seoul_pm10 
 boxplot(shanghai_seoul_finedust$shanghai_pm10, shanghai_seoul_finedust$seoul_pm10)
 plot(shanghai_seoul_finedust$shanghai_pm10, shanghai_seoul_finedust$seoul_pm10)
 
+gg4 <- ggplot(shanghai_seoul_finedust, aes(x=seoul_pm10, y=shanghai_pm10)) + geom_point(shape=19, size=2, color='pink') + xlab("Seoul") + ylab("Shanghai") + ggtitle("Correlation analysis between Seoul findeust and Shanghai finedust") + theme(plot.title = element_text(size=15, hjust=0.5))
+gg4
+
 # visualization annually
 shanghai_seoul_finedust$date <- as.Date(shanghai_seoul_finedust$date, format="%Y/%m/%d") # change string to date 
 
@@ -179,8 +182,8 @@ shanghai_seoul_finedust201414 <- shanghai_seoul_finedust201414[-grep("12", shang
 cor(shanghai_seoul_finedust201414$shanghai_pm10, shanghai_seoul_finedust201414$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust201414$shanghai_pm10, shanghai_seoul_finedust201414$seoul_pm10)
 
-shagg201414 <- ggplot(shanghai_seoul_finedust201414, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2014") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
-shagg201414 <- shagg201414+geom_line(aes(month, seoul_pm10), color = 'blue')
+shagg201414 <- ggplot(shanghai_seoul_finedust201414, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2014") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shagg201414 <- shagg201414+geom_line(aes(month, seoul_pm10), color = 'skyblue', size=1)
 shagg201414
 
 
@@ -199,8 +202,8 @@ shanghai_seoul_finedust201514 <- shanghai_seoul_finedust201514[-grep("12", shang
 cor(shanghai_seoul_finedust201514$shanghai_pm10, shanghai_seoul_finedust201514$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust201514$shanghai_pm10, shanghai_seoul_finedust201514$seoul_pm10)
 
-shagg201514 <- ggplot(shanghai_seoul_finedust201514, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2015") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
-shagg201514 <- shagg201514+geom_line(aes(month, seoul_pm10), color = 'blue')
+shagg201514 <- ggplot(shanghai_seoul_finedust201514, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2015") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shagg201514 <- shagg201514+geom_line(aes(month, seoul_pm10), color = 'skyblue', size=1)
 shagg201514
 
 
@@ -219,8 +222,8 @@ shanghai_seoul_finedust201614 <- shanghai_seoul_finedust201614[-grep("12", shang
 cor(shanghai_seoul_finedust201614$shanghai_pm10, shanghai_seoul_finedust201614$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust201614$shanghai_pm10, shanghai_seoul_finedust201614$seoul_pm10)
 
-shagg201614 <- ggplot(shanghai_seoul_finedust201614, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2016") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
-shagg201614 <- shagg201614+geom_line(aes(month, seoul_pm10), color = 'blue')
+shagg201614 <- ggplot(shanghai_seoul_finedust201614, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2016") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shagg201614 <- shagg201614+geom_line(aes(month, seoul_pm10), color = 'skyblue', size=1)
 shagg201614
 
 
@@ -239,8 +242,8 @@ shanghai_seoul_finedust201714 <- shanghai_seoul_finedust201714[-grep("12", shang
 cor(shanghai_seoul_finedust201714$shanghai_pm10, shanghai_seoul_finedust201714$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust201714$shanghai_pm10, shanghai_seoul_finedust201714$seoul_pm10)
 
-shagg201714 <- ggplot(shanghai_seoul_finedust201714, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2017") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
-shagg201714 <- shagg201714+geom_line(aes(month, seoul_pm10), color = 'blue')
+shagg201714 <- ggplot(shanghai_seoul_finedust201714, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2017") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shagg201714 <- shagg201714+geom_line(aes(month, seoul_pm10), color = 'skyblue', size=1)
 shagg201714
 
 
@@ -259,8 +262,8 @@ shanghai_seoul_finedust201814 <- shanghai_seoul_finedust201814[-grep("12", shang
 cor(shanghai_seoul_finedust201814$shanghai_pm10, shanghai_seoul_finedust201814$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust201814$shanghai_pm10, shanghai_seoul_finedust201814$seoul_pm10)
 
-shagg201814 <- ggplot(shanghai_seoul_finedust201814, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2018") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
-shagg201814 <- shagg201814+geom_line(aes(month, seoul_pm10), color = 'blue')
+shagg201814 <- ggplot(shanghai_seoul_finedust201814, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2018") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shagg201814 <- shagg201814+geom_line(aes(month, seoul_pm10), color = 'skyblue', size=1)
 shagg201814
 
 
@@ -280,8 +283,8 @@ shanghai_seoul_finedust201914 <- shanghai_seoul_finedust201914[-grep("12", shang
 cor(shanghai_seoul_finedust201914$shanghai_pm10, shanghai_seoul_finedust201914$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust201914$shanghai_pm10, shanghai_seoul_finedust201914$seoul_pm10)
 
-shagg201914 <- ggplot(shanghai_seoul_finedust201914, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2019") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
-shagg201914 <- shagg201914+geom_line(aes(month, seoul_pm10), color = 'blue')
+shagg201914 <- ggplot(shanghai_seoul_finedust201914, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2019") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shagg201914 <- shagg201914+geom_line(aes(month, seoul_pm10), color = 'skyblue', size=1)
 shagg201914
 
 
@@ -293,8 +296,8 @@ shanghai_seoul_finedust202014 <- shanghai_seoul_finedust2020
 cor(shanghai_seoul_finedust202014$shanghai_pm10, shanghai_seoul_finedust202014$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust202014$shanghai_pm10, shanghai_seoul_finedust202014$seoul_pm10)
 
-shagg202014 <- ggplot(shanghai_seoul_finedust202014, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'red') + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2020") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
-shagg202014 <- shagg201914+geom_line(aes(month, seoul_pm10), color = 'blue')
+shagg202014 <- ggplot(shanghai_seoul_finedust202014, aes(month, shanghai_pm10, group = 1)) + geom_line(color = 'pink', size=1) + ggtitle("Finedust between Shanghai and Seoul from Jan to Apr in 2020") + ylab('finedust') + theme(plot.title = element_text(size = 9, hjust=0.5))
+shagg202014 <- shagg201914+geom_line(aes(month, seoul_pm10), color = 'skyblue', size=1)
 shagg202014
 
 grid.arrange(shagg201414, shagg201514, shagg201614, shagg201714, shagg201814, shagg201914, shagg202014, ncol=3)
