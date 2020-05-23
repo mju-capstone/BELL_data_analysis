@@ -101,8 +101,7 @@ Contributor :raising_hand: : [이지우](https://github.com/lee-jiu, "이지우"
   상관계수가 약 0.06이므로 거의 무시될 수 있는 선형관계에 해당.  
  
      2020년 
-  <img width="500" src="https://user-images.githubusercontent.com/56306637/82736935-3768dc00-9d68-11ea-8080-da2c9d4b4912.PNG">   
-  앞선 두 년도와는 다른 분석 결과  
+  <img width="500" src="https://user-images.githubusercontent.com/56306637/82736935-3768dc00-9d68-11ea-8080-da2c9d4b4912.PNG">    
   상관계수가 약 0.23이므로 약한 양적 선형관계에 해당.   
   
   > #### 교통량과 미세먼지 농도는 약한 양적 상관관계가 있다고 판단 가능 
