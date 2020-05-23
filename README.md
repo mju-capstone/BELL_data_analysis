@@ -30,6 +30,11 @@
 
 > contributor 👩‍💻 : [최은지](https://github.com/ChoiEunji0114)
 
+## 데이터 수집
+
+- [시/도별 미세먼지 데이터](https://aqicn.org/data-platform/register/kr/)
+- [시/도별 행정 경계 (census) 데이터](https://sgis.kostat.go.kr/view/index)
+
 ## 🛠 1-1 분석 주제 : 시/도별 미세먼지 농도의 차이
 
 - 우리나라의 총 162개의 도시의 데이터를 모두 일일이 수집하고 통계를 내는데에 무리가 있다고 판단, 일부 지역의 미세먼지 데이터 부재 등의 이유로 시/군/구 단위의 데이터 시각화 대신 시/도별 데이터 시각화를 하기로 함.
