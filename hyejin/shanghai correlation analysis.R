@@ -88,7 +88,7 @@ shagg3
 
   # 2017
 shanghai_seoul_finedust2017 <- subset(shanghai_seoul_finedust, year=="2017")
-    # correlation value = 0.2510347
+    # correlation value = 0.2050618
 cor(shanghai_seoul_finedust2017$shanghai_pm10, shanghai_seoul_finedust2017$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust2017$shanghai_pm10, shanghai_seoul_finedust2017$seoul_pm10)
 
@@ -107,7 +107,7 @@ shagg4
 
   # 2018
 shanghai_seoul_finedust2018 <- subset(shanghai_seoul_finedust, year=="2018")
-    # correlation value = 0.2510347
+    # correlation value = 0.3833879
 cor(shanghai_seoul_finedust2018$shanghai_pm10, shanghai_seoul_finedust2018$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust2018$shanghai_pm10, shanghai_seoul_finedust2018$seoul_pm10)
 
@@ -126,7 +126,7 @@ shagg5
 
   # 2019
 shanghai_seoul_finedust2019 <- subset(shanghai_seoul_finedust, year=="2019")
-    # correlation value = 0.2510347
+    # correlation value = 0.3532438
 cor(shanghai_seoul_finedust2019$shanghai_pm10, shanghai_seoul_finedust2019$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust2019$shanghai_pm10, shanghai_seoul_finedust2019$seoul_pm10)
 
@@ -145,7 +145,7 @@ shagg6
 
   # 2020
 shanghai_seoul_finedust2020 <- subset(shanghai_seoul_finedust, year=="2020")
-    # correlation value = 0.2510347
+    # correlation value = -0.05081083
 cor(shanghai_seoul_finedust2020$shanghai_pm10, shanghai_seoul_finedust2020$seoul_pm10, use=("complete.obs"))
 plot(shanghai_seoul_finedust2020$shanghai_pm10, shanghai_seoul_finedust2020$seoul_pm10)
 

@@ -52,7 +52,7 @@ shandong_seoul_finedust$month <- month(shandong_seoul_finedust$date)
 
   # 2014
 shandong_seoul_finedust2014 <- subset(shandong_seoul_finedust, year=="2014")
-    # correlation value = 0.1.886321
+    # correlation value = 0.1886321
 cor(shandong_seoul_finedust2014$shandong_average, shandong_seoul_finedust2014$seoul_average, use=("complete.obs"))
 plot(shandong_seoul_finedust2014$shandong_average, shandong_seoul_finedust2014$seoul_average)
 
