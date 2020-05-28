@@ -195,6 +195,17 @@ cov(d7_t, d7_a)
 cor(d7_t, d7_a, use='complete.obs', method = 'pearson')
 cor.test(d7_t, d7_a)
 
+c2018 <- c[1:362,]
+c2019 <- c[363:724,]
+c2020 <- c[725:815,]
+
+cor.test(c2018$t_sum, c2018$pm10)
+cor.test(c2019$t_sum, c2019$pm10)
+cor.test(c2020$t_sum, c2020$pm10)
+
+
+
+
 #month 1~3
 attach(f2018)
 cov(fa5, fa2)
@@ -210,8 +221,6 @@ cov(fff2, fff5)
 cor(fff2, fff5, use='complete.obs', method = 'pearson')
 cor.test(fff2, fff5)
 plot(fff2, fff5)
-
-
 
 bar1<-ggplot(dd2, aes(x=year, y=air, fill=week))+ coord_cartesian(ylim = c(30, 47))
 f1<-bar1+geom_bar(stat="identity", position = "dodge")+scale_fill_brewer(palette="Pastel1") + ggtitle("주중 및 주말별 서울시 미세먼지(pm10) 농도")+theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30"))
@@ -248,13 +257,77 @@ plot(dw3$x.x~dw3$x.y)
 
 
 ggplot(d2, aes(x=pm10, y=t_sum)) + geom_point(shape=19, size=2, color='pink') + xlab("미세먼지 농도(pm10)") + ylab("교통량") +
-  ggtitle("주중 서울시 미세먼지(pm10) 농도와 교통량의 상관관계") + theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
+  ggtitle("주중 서울시 미세먼지(pm10) 농도와 교통량의 상관관계(일 단위)") + theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
   theme(plot.title = element_text(size=10, hjust=0.5)) +
   coord_cartesian(ylim = c(7300000, 11000000)) 
 
 
 ggplot(dw3, aes(x=x.y, y=x.x)) + geom_point(shape=19, size=2, color='skyblue') + xlab("미세먼지 농도(pm10)") + ylab("교통량") +
-  ggtitle("주중 서울시 미세먼지(pm10) 농도와 교통량의 상관관계") + theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
+  ggtitle("주중 서울시 미세먼지(pm10) 농도와 교통량의 상관관계(월 단위)") + theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
   theme(plot.title = element_text(size=10, hjust=0.5)) +
   coord_cartesian(ylim = c(8000000, 10000000), xlim = c(20, 65)) 
 
+
+#daily
+plot(c2018$t_sum~c2018$pm10, ylim = c(6000000, 11000000))
+ggplot(c2018, aes(x=pm10, y=t_sum)) + geom_point(shape=19, size=2, color='pink') + xlab("미세먼지 농도(pm10)") + ylab("교통량") + 
+  ggtitle("2018 - traffic volume~fine dust") + 
+  theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
+  coord_cartesian(ylim = c(6000000, 11000000))
+
+plot(c2019$t_sum~c2019$pm10, ylim = c(6000000, 11000000))
+ggplot(c2019, aes(x=pm10, y=t_sum)) + geom_point(shape=19, size=2, color='pink') + xlab("미세먼지 농도(pm10)") + ylab("교통량") + 
+  ggtitle("2019 - traffic volume~fine dust") + 
+  theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
+  coord_cartesian(ylim = c(6000000, 11000000))
+
+plot(c2020$t_sum~c2020$pm10, ylim = c(6000000, 11000000))
+ggplot(c2020, aes(x=pm10, y=t_sum)) + geom_point(shape=19, size=2, color='pink') + xlab("미세먼지 농도(pm10)") + ylab("교통량") + 
+  ggtitle("2020 - traffic volume~fine dust") + 
+  theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 15, color = "gray30")) +
+  coord_cartesian(ylim = c(6000000, 11000000))
+
+
+# # # 
+#표준 정규화
+n1 <- transform(c2018, z.pm10 = scale(pm10), z.t_sum = scale(t_sum))
+n2 <- transform(c2019, z.pm10 = scale(pm10), z.t_sum = scale(t_sum))
+n3 <- transform(c2020, z.pm10 = scale(pm10), z.t_sum = scale(t_sum))
+
+
+ggplot1  <-ggplot()+
+  geom_line(data=n1,aes(y=z.t_sum,x= date,colour="darkblue"),size=0.7 )+
+  geom_line(data=n1,aes(y=z.pm10,x= date,colour="#ff3366"),size=0.7) +  xlab("date") + ylab("z-score") +
+  scale_color_discrete(name = "data", labels = c("미세먼지", "교통량"))+ 
+  ggtitle("2018 일별 서울시 교통량 미세먼지 농도 추이 비교")+theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray10")) 
+ggplot1
+
+ggplot2  <-ggplot()+
+  geom_line(data=n2,aes(y=z.t_sum,x= date,colour="darkblue"),size=0.7 )+
+  geom_line(data=n2,aes(y=z.pm10,x= date,colour="#ff3366"),size=0.7) +  xlab("date") + ylab("z-score") +
+  scale_color_discrete(name = "data", labels = c("미세먼지", "교통량"))+ 
+  ggtitle("2019 일별 서울시 교통량 미세먼지 농도 추이 비교")+theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray10")) 
+ggplot2
+
+ggplot3  <-ggplot()+
+  geom_line(data=n3,aes(y=z.t_sum,x= date,colour="darkblue"),size=0.7 )+
+  geom_line(data=n3,aes(y=z.pm10,x= date,colour="#ff3366"),size=0.7) +  xlab("date") + ylab("z-score") +
+  scale_color_discrete(name = "data", labels = c("미세먼지", "교통량"))+ 
+  ggtitle("2020 일별 서울시 교통량 미세먼지 농도 추이 비교")+theme(plot.title = element_text(family = "serif", face = "bold", hjust = 0.5, size = 15, color = "gray10")) 
+ggplot3
+
+
+
+
+dw3
+model <- lm(dw3$x.y ~ dw3$x.x)
+model
+
+model2 <- lm(d2$pm10 ~ d2$t_sum)
+model2
+
+cor.test(dw3$x.x, dw3$x.y)
+cor.test(d2$pm10, d2$t_sum)
+
+summary(model)
+summary(model2)
